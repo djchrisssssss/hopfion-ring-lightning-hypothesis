@@ -2,7 +2,9 @@
 
 # 霍普離子環閃電假說
 
-**重新詮釋「球狀閃電」為拓撲環狀電漿孤立子**
+**Hopfion (Ring) Lightning Hypothesis**
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17510337.svg)](https://doi.org/10.5281/zenodo.17510337)
 
 本假說提出：所謂的「球狀閃電」實際上並非球體，而是 **Hopfion (Ring) Lightning**——一種拓撲保護的電漿渦旋環體，其能量與穩定性源自電磁場中的拓撲不變量。觀測到的球形外觀是厚發光環面的光學假象。
 
@@ -10,12 +12,21 @@
 
 ---
 
+## 作者
+
+**Kris Lai**
+- Email: kriss@scallop.io
+- ORCID: [0009-0000-2223-4826](https://orcid.org/0009-0000-2223-4826)
+- 機構: [Scallop Labs](https://www.scallop.io/)
+
+---
+
 ## 文件
 
 | 文件 | 語言 | 說明 |
 |------|------|------|
-| [`hypothesis-en.md`](./hypothesis-en.md) | English | 完整英文版假說架構 |
-| [`hypothesis-zh-TW.md`](./hypothesis-zh-TW.md) | 繁體中文 | 完整繁體中文版假說架構 |
+| [`hypothesis-en.md`](./markdown/en/hypothesis-en.md) | English | 完整英文版假說架構（Markdown） |
+| [`hypothesis-zh-TW.md`](./markdown/zh-TW/hypothesis-zh-TW.md) | 繁體中文 | 完整繁體中文版假說架構 |
 
 ---
 
@@ -65,4 +76,6 @@ Q_H = ∫ (A · B) d³r ≠ 0
 
 ## 授權
 
-CC BY 4.0 — 本作品以開放知識探索為目的分享。
+本作品採用 [Creative Commons 姓名標示 4.0 國際授權條款 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.zh-hant) 授權。
+
+您可以自由分享與改作本作品，惟須適當標註出處。

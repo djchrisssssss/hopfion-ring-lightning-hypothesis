@@ -2,11 +2,22 @@
 
 # Hopfion (Ring) Lightning Hypothesis
 
-**Reinterpreting "Ball Lightning" as a Topological Ring-Shaped Plasma Soliton**
+**霍普離子環閃電假說**
 
-This hypothesis proposes that so-called "Ball Lightning" is not a sphere at all, but a **Hopfion (Ring) Lightning** — a topologically protected plasma ring vortex whose energy and stability derive from topological invariants in the electromagnetic field. The observed spherical appearance is an optical artifact of a thick luminous torus.
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17510337.svg)](https://doi.org/10.5281/zenodo.17510337)
+
+A theoretical hypothesis proposing that so-called "Ball Lightning" is not a sphere at all, but a **Hopfion (Ring) Lightning** — a topologically protected plasma ring vortex whose energy and stability derive from topological invariants in the electromagnetic field. The observed spherical appearance is an optical artifact of a thick luminous torus.
 
 > This is a living document. Contributions, critiques, and falsification attempts are welcome.
+
+---
+
+## Author
+
+**Kris Lai**
+- Email: kriss@scallop.io
+- ORCID: [0009-0000-2223-4826](https://orcid.org/0009-0000-2223-4826)
+- Affiliation: [Scallop Labs](https://www.scallop.io/)
 
 ---
 
@@ -14,8 +25,8 @@ This hypothesis proposes that so-called "Ball Lightning" is not a sphere at all,
 
 | Document | Language | Description |
 |----------|----------|-------------|
-| [`hypothesis-en.md`](./hypothesis-en.md) | English | Full hypothesis framework in English |
-| [`hypothesis-zh-TW.md`](./hypothesis-zh-TW.md) | 繁體中文 | Full hypothesis framework in Traditional Chinese |
+| [`hypothesis-en.md`](./markdown/en/hypothesis-en.md) | English | Full hypothesis framework in Markdown |
+| [`hypothesis-zh-TW.md`](./markdown/zh-TW/hypothesis-zh-TW.md) | 繁體中文 | Full hypothesis framework in Traditional Chinese |
 
 ---
 
@@ -65,4 +76,6 @@ This hypothesis was co-created with the assistance of AI models and tools:
 
 ## License
 
-CC BY 4.0 — This work is shared for open intellectual exploration.
+This work is licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+You are free to share and adapt this work, provided appropriate credit is given.
