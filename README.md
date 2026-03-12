@@ -10,6 +10,8 @@ A theoretical hypothesis proposing that so-called "Ball Lightning" is not a sphe
 
 > This is a living document. Contributions, critiques, and falsification attempts are welcome.
 
+![Hopfion Ring Lightning](./assets/cover.png)
+
 ---
 
 ## Author
