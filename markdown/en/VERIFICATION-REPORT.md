@@ -186,23 +186,23 @@ Recent experimental progress directly supporting the theoretical framework:
 
 ### 4.1 Corrections Required
 
-| # | Issue | Location | Severity | Recommendation |
-|---|-------|----------|----------|----------------|
-| 1 | Superconductor hopfions listed as "realized" | Ch. 2.4 | Medium | Change to "theoretically predicted" |
-| 2 | No references cited | Entire document | High | Add 30+ references (see Section 5) |
-| 3 | Q_H notation ambiguity | Ch. 2.2, 3 | Low | Clarify relationship between magnetic helicity and Hopf charge |
+| # | Issue | Location | Severity | Status | Resolution |
+|---|-------|----------|----------|--------|------------|
+| 1 | Superconductor hopfions listed as "realized" | Ch. 2.4 | Medium | **RESOLVED** | Changed to "theoretically predicted" in both EN and zh-TW |
+| 2 | No references cited | Entire document | High | **RESOLVED** | 38 references added with DOIs, organized by category |
+| 3 | Q_H notation ambiguity | Ch. 2.2, 3 | Low | **RESOLVED** | Clarified magnetic helicity H_m vs Hopf charge Q_H = H_m/(4π)², citing Woltjer [21] and Moffatt [22] |
 
 ### 4.2 Enhancements Recommended
 
-| # | Enhancement | Priority |
-|---|------------|----------|
-| 1 | Add full reference list with DOIs | High |
-| 2 | Add "Prior Art" section acknowledging Ranada-Trueba lineage | High |
-| 3 | Add comparison table: this hypothesis vs. competing models | Medium |
-| 4 | Add observational data table with typical ball lightning parameters | Medium |
-| 5 | Add experimental hopfion milestones table (2015-2023) | Medium |
-| 6 | Add energy budget analysis with self-consistency check | Low |
-| 7 | Distinguish topological confinement from centrifugal confinement in rotation speed claims | Low |
+| # | Enhancement | Priority | Status | Resolution |
+|---|------------|----------|--------|------------|
+| 1 | Add full reference list with DOIs | High | **RESOLVED** | 38 references added across 7 categories |
+| 2 | Add "Prior Art" section acknowledging Ranada-Trueba lineage | High | **RESOLVED** | "Prior Art and Intellectual Lineage" section added (EN + zh-TW) |
+| 3 | Add comparison table: this hypothesis vs. competing models | Medium | **RESOLVED** | 5-model × 9-feature comparison table added (EN + zh-TW) |
+| 4 | Add observational data table with typical ball lightning parameters | Medium | **RESOLVED** | 10-property observational data table added (EN + zh-TW) |
+| 5 | Add experimental hopfion milestones table (2015-2023) | Medium | **RESOLVED** | 8-milestone table (2015–2023) added (EN + zh-TW) |
+| 6 | Add energy budget analysis with self-consistency check | Low | Open | Future enhancement |
+| 7 | Distinguish topological confinement from centrifugal confinement in rotation speed claims | Low | Open | Future enhancement |
 
 ### 4.3 Strengths
 
