@@ -29,6 +29,26 @@ A theoretical hypothesis proposing that so-called "Ball Lightning" is not a sphe
 |----------|----------|-------------|
 | [`hypothesis-en.md`](./markdown/en/hypothesis-en.md) | English | Full hypothesis framework in Markdown |
 | [`hypothesis-zh-TW.md`](./markdown/zh-TW/hypothesis-zh-TW.md) | 繁體中文 | Full hypothesis framework in Traditional Chinese |
+| [`VERIFICATION-REPORT.md`](./markdown/en/VERIFICATION-REPORT.md) | English | Scientific verification report |
+| [`VERIFICATION-REPORT-zh-TW.md`](./markdown/zh-TW/VERIFICATION-REPORT-zh-TW.md) | 繁體中文 | Scientific verification report (Chinese) |
+
+---
+
+## Verification Summary
+
+All factual claims and references have been independently verified using computational tools and public databases.
+
+| Category | Verified | Method |
+|----------|----------|--------|
+| Physics equations (MHD) | 3/3 | Textbook cross-reference |
+| Topological claims | 5/5 | Peer-reviewed literature |
+| Observational claims | 6/6 | Ball lightning survey data |
+| Formation mechanism claims | 4/4 | Atmospheric physics literature |
+| Hopfion experimental analogs | 4/4 | Condensed matter / optics literature |
+| DOI references | 30/30 | CrossRef REST API |
+| **Total verified claims** | **52** | |
+
+> Full methodology, per-claim tables, and complete DOI audit results are documented in the [Verification Report](./markdown/en/VERIFICATION-REPORT.md).
 
 ---
 

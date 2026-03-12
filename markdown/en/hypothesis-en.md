@@ -94,10 +94,10 @@ This is directly analogous to bubble rings in water — ring circulation maintai
 
 Hopfion-type structures have been realized or simulated in several systems:
 
-- Flux vortices in superconductors;
-- Helically structured optical fields;
-- Spin Hopfions in magnetic thin films;
-- Closed magnetic-ring solutions in plasma simulations.
+- Topological flux structures in superconductors (theoretically predicted);
+- Helically structured optical fields [31];
+- Spin Hopfions in magnetic thin films [30, 32];
+- Closed magnetic-ring solutions in plasma simulations [27].
 
 Hopfion (Ring) Lightning under atmospheric conditions can be viewed as the natural discharge-driven extension of these phenomena — a system where the electromagnetic field is the fluid and topology is the skeleton.
 
@@ -238,3 +238,99 @@ The stability of Hopfion (Ring) Lightning does not depend on external energy, bu
 ---
 
 *This hypothesis framework is designed as a falsifiable, physics-grounded theoretical proposal pending experimental verification.*
+
+---
+
+## References
+
+### Ball Lightning Observations
+
+[1] Cen, J., Yuan, P. & Xue, S. (2014). Observation of the optical and spectral characteristics of ball lightning. *Phys. Rev. Lett.* 112, 035001. DOI: [10.1103/PhysRevLett.112.035001](https://doi.org/10.1103/PhysRevLett.112.035001)
+
+[2] Wang, H., Yuan, P., Cen, J. & Liu, G. (2018). Study on the luminous characteristics of a natural ball lightning. *Appl. Phys. Lett.* 112, 064103. DOI: [10.1063/1.5012129](https://doi.org/10.1063/1.5012129)
+
+[3] Shmatov, M.L. & Stephan, K.D. (2019). Advances in ball lightning research. *J. Atmos. Sol.-Terr. Phys.* 195, 105115. DOI: [10.1016/j.jastp.2019.105115](https://doi.org/10.1016/j.jastp.2019.105115)
+
+[4] Rayle, W.D. (1966). Ball lightning characteristics. NASA Technical Note TN D-3188.
+
+[5] Smirnov, B.M. (1987). The properties and the nature of ball lightning. *Phys. Rep.* 152, 177-236. DOI: [10.1016/0370-1573(87)90142-6](https://doi.org/10.1016/0370-1573(87)90142-6)
+
+[6] Smirnov, B.M. (1993). Physics of ball lightning. *Phys. Rep.* 224, 151-236. DOI: [10.1016/0370-1573(93)90121-S](https://doi.org/10.1016/0370-1573(93)90121-S)
+
+[7] Stenhoff, M. (1999). *Ball Lightning: An Unsolved Problem in Atmospheric Physics*. Kluwer Academic. DOI: [10.1007/b115123](https://doi.org/10.1007/b115123)
+
+### Electromagnetic Knot / Topological Ball Lightning Models
+
+[8] Ranada, A.F. (1989). A topological theory of the electromagnetic field. *Lett. Math. Phys.* 18, 97-106. DOI: [10.1007/BF00401864](https://doi.org/10.1007/BF00401864)
+
+[9] Ranada, A.F. (1990). Knotted solutions of the Maxwell equations in vacuum. *J. Phys. A* 23, L815-L820.
+
+[10] Ranada, A.F. & Trueba, J.L. (1996). Ball lightning an electromagnetic knot? *Nature* 383, 32. DOI: [10.1038/383032a0](https://doi.org/10.1038/383032a0)
+
+[11] Ranada, A.F., Soler, M. & Trueba, J.L. (1998). A model of ball lightning as a magnetic knot with linked streamers. *J. Geophys. Res.* 103, 23309-23313. DOI: [10.1029/98JD01539](https://doi.org/10.1029/98JD01539)
+
+[12] Ranada, A.F., Soler, M. & Trueba, J.L. (2000). Ball lightning as a force-free magnetic knot. *Phys. Rev. E* 62, 7181-7190. DOI: [10.1103/PhysRevE.62.7181](https://doi.org/10.1103/PhysRevE.62.7181)
+
+[13] Tsui, K.H. (2003). Ball lightning as a magnetostatic spherical force-free field plasmoid. *Phys. Plasmas* 10, 4112-4117. DOI: [10.1063/1.1605949](https://doi.org/10.1063/1.1605949)
+
+### Competing Theoretical Models
+
+[14] Abrahamson, J. & Dinniss, J. (2000). Ball lightning caused by oxidation of nanoparticle networks from normal lightning strikes on soil. *Nature* 403, 519-521. DOI: [10.1038/35000525](https://doi.org/10.1038/35000525)
+
+[15] Lowke, J.J. et al. (2012). Birth of ball lightning. *J. Geophys. Res.* 117, D19107. DOI: [10.1029/2012JD017921](https://doi.org/10.1029/2012JD017921)
+
+### Hopfion Mathematics and Field Theory
+
+[16] Hopf, H. (1931). Uber die Abbildungen der dreidimensionalen Sphare auf die Kugelflache. *Math. Ann.* 104, 637-665. DOI: [10.1007/BF01457962](https://doi.org/10.1007/BF01457962)
+
+[17] Whitehead, J.H.C. (1947). An expression of Hopf's invariant as an integral. *PNAS* 33, 117-123. DOI: [10.1073/pnas.33.5.117](https://doi.org/10.1073/pnas.33.5.117)
+
+[18] Faddeev, L. & Niemi, A.J. (1997). Stable knot-like structures in classical field theory. *Nature* 387, 58-61. DOI: [10.1038/387058a0](https://doi.org/10.1038/387058a0)
+
+[19] Arrayas, M., Bouwmeester, D. & Trueba, J.L. (2017). Knots in electromagnetism. *Phys. Rep.* 667, 1-61. DOI: [10.1016/j.physrep.2016.11.001](https://doi.org/10.1016/j.physrep.2016.11.001)
+
+[20] Irvine, W.T.M. & Bouwmeester, D. (2008). Linked and knotted beams of light. *Nature Phys.* 4, 716-720. DOI: [10.1038/nphys1056](https://doi.org/10.1038/nphys1056)
+
+### MHD Topology and Magnetic Helicity
+
+[21] Woltjer, L. (1958). A theorem on force-free magnetic fields. *PNAS* 44, 489-491. DOI: [10.1073/pnas.44.6.489](https://doi.org/10.1073/pnas.44.6.489)
+
+[22] Moffatt, H.K. (1969). The degree of knottedness of tangled vortex lines. *J. Fluid Mech.* 35, 117-129.
+
+[23] Taylor, J.B. (1974). Relaxation of toroidal plasma and generation of reverse magnetic fields. *Phys. Rev. Lett.* 33, 1139-1141. DOI: [10.1103/PhysRevLett.33.1139](https://doi.org/10.1103/PhysRevLett.33.1139)
+
+[24] Taylor, J.B. (1986). Relaxation and magnetic reconnection in plasmas. *Rev. Mod. Phys.* 58, 741-763. DOI: [10.1103/RevModPhys.58.741](https://doi.org/10.1103/RevModPhys.58.741)
+
+[25] Berger, M.A. & Field, G.B. (1984). The topological properties of magnetic helicity. *J. Fluid Mech.* 147, 133-148.
+
+[26] Kamchatnov, A.M. (1982). Topological soliton in magnetohydrodynamics. *Sov. Phys. JETP* 55, 69-73. arXiv: [physics/0409093](https://arxiv.org/abs/physics/0409093)
+
+### Experimental Hopfion Realizations
+
+[27] Smiet, C.B. et al. (2015). Self-organizing knotted magnetic structures in plasma. *Phys. Rev. Lett.* 115, 095001. DOI: [10.1103/PhysRevLett.115.095001](https://doi.org/10.1103/PhysRevLett.115.095001)
+
+[28] Hall, D.S. et al. (2016). Tying quantum knots. *Nature Phys.* 12, 478-483. DOI: [10.1038/nphys3624](https://doi.org/10.1038/nphys3624)
+
+[29] Lee, W. et al. (2018). Synthetic electromagnetic knot in a three-dimensional skyrmion. *Sci. Adv.* 4, eaao3820. DOI: [10.1126/sciadv.aao3820](https://doi.org/10.1126/sciadv.aao3820)
+
+[30] Kent, N. et al. (2021). Creation and observation of Hopfions in magnetic multilayer systems. *Nature Commun.* 12, 1562. DOI: [10.1038/s41467-021-21846-5](https://doi.org/10.1038/s41467-021-21846-5)
+
+[31] Sugic, D. et al. (2021). Particle-like topologies in light. *Nature Commun.* 12, 6785. DOI: [10.1038/s41467-021-26171-5](https://doi.org/10.1038/s41467-021-26171-5)
+
+[32] Zheng, F. et al. (2023). Hopfion rings in a cubic chiral magnet. *Nature* 623, 718-723. DOI: [10.1038/s41586-023-06658-5](https://doi.org/10.1038/s41586-023-06658-5)
+
+### Condensed Matter Hopfions
+
+[33] Ackerman, P.J. & Smalyukh, I.I. (2017). Static three-dimensional topological solitons in fluid chiral ferromagnets and colloids. *Nature Mater.* 16, 426-432. DOI: [10.1038/nmat4826](https://doi.org/10.1038/nmat4826)
+
+[34] Tai, J.-S.B. & Smalyukh, I.I. (2019). Three-dimensional crystals of adaptive knots. *Science* 365, 1449-1453. DOI: [10.1126/science.aay1638](https://doi.org/10.1126/science.aay1638)
+
+[35] Rybakov, F.N. et al. (2022). Magnetic hopfions in solids. *APL Mater.* 10, 111113. DOI: [10.1063/5.0099942](https://doi.org/10.1063/5.0099942)
+
+### Textbooks and Reviews
+
+[36] Arnold, V.I. & Khesin, B.A. (2021). *Topological Methods in Hydrodynamics*. 2nd ed. Springer. DOI: [10.1007/978-3-030-74278-2](https://doi.org/10.1007/978-3-030-74278-2)
+
+[37] Biskamp, D. (1993). *Nonlinear Magnetohydrodynamics*. Cambridge UP.
+
+[38] Bellan, P.M. (2000). *Spheromaks*. World Scientific.

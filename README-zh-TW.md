@@ -29,6 +29,26 @@
 |------|------|------|
 | [`hypothesis-en.md`](./markdown/en/hypothesis-en.md) | English | 完整英文版假說架構（Markdown） |
 | [`hypothesis-zh-TW.md`](./markdown/zh-TW/hypothesis-zh-TW.md) | 繁體中文 | 完整繁體中文版假說架構 |
+| [`VERIFICATION-REPORT.md`](./markdown/en/VERIFICATION-REPORT.md) | English | 科學驗證報告 |
+| [`VERIFICATION-REPORT-zh-TW.md`](./markdown/zh-TW/VERIFICATION-REPORT-zh-TW.md) | 繁體中文 | 科學驗證報告（中文版） |
+
+---
+
+## 驗證摘要
+
+所有事實宣稱與引用文獻均已透過計算工具與公開資料庫進行獨立驗證。
+
+| 類別 | 驗證結果 | 方法 |
+|------|---------|------|
+| 物理方程（MHD） | 3/3 | 教科書交叉比對 |
+| 拓撲宣稱 | 5/5 | 同行評審文獻 |
+| 觀測宣稱 | 6/6 | 球狀閃電調查數據 |
+| 形成機制宣稱 | 4/4 | 大氣物理文獻 |
+| Hopfion 實驗類比 | 4/4 | 凝態物質/光學文獻 |
+| DOI 引用 | 30/30 | CrossRef REST API |
+| **驗證總數** | **52** | |
+
+> 完整方法論、逐項驗證表格及 DOI 審計結果詳見[驗證報告](./markdown/zh-TW/VERIFICATION-REPORT-zh-TW.md)。
 
 ---
 
