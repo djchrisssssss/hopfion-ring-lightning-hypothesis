@@ -1,0 +1,35 @@
+# Configuration for helicity survey across all MHD trajectories
+
+scan:
+  datasets:
+    - name: MHD_64
+      base_path: "hf://datasets/polymathic-ai/"
+      splits: [train, valid, test]
+    - name: MHD_256
+      base_path: "hf://datasets/polymathic-ai/"
+      splits: [train]  # Start with train only due to size
+
+  helicity:
+    dx: 1.0  # Grid spacing (code units)
+    gauge: coulomb  # Coulomb gauge for vector potential
+
+  topology_detection:
+    sigma_threshold: 3.0  # Standard deviations for detection
+    min_volume: 8  # Minimum structure volume in grid cells
+    ring_threshold: 0.3  # Inertia tensor threshold for ring classification
+    tube_threshold: 3.0  # Inertia tensor threshold for tube classification
+
+  tracking:
+    max_distance: 10.0  # Maximum centroid displacement between frames
+    overlap_threshold: 0.3  # Minimum volume similarity for matching
+
+  output:
+    save_dir: "results/"
+    save_helicity_fields: false  # Save full h(x) fields (large!)
+    save_timeseries: true
+    save_structure_catalog: true
+
+  spectral:
+    n_bins: 32
+    compute_helical_decomposition: true
+    compute_cross_helicity: true

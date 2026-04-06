@@ -1,0 +1,44 @@
+# Configuration for vortex census across turbulence datasets
+
+scan:
+  datasets:
+    - name: turbulence_gravity_cooling
+      base_path: "hf://datasets/polymathic-ai/"
+      splits: [train]
+      parameters:
+        T_0: [10, 100, 1000]  # Kelvin
+        rho_0: [44.5, 4.45, 0.445]  # per cc
+        Z: [1.0, 0.1, 0.0]  # metallicity fraction
+
+    - name: turbulent_radiative_layer_2D
+      base_path: "hf://datasets/polymathic-ai/"
+      splits: [train, valid, test]
+      parameters:
+        t_cool: [0.03, 0.06, 0.1, 0.18, 0.32, 0.56, 1.00, 1.78, 3.16]
+
+    - name: turbulent_radiative_layer_3D
+      base_path: "hf://datasets/polymathic-ai/"
+      splits: [train]
+      parameters:
+        t_cool: [0.03, 0.06, 0.1, 0.18, 0.32, 0.56, 1.00, 1.78, 3.16]
+
+  vortex_detection:
+    sigma_threshold: 2.0
+    min_volume: 4
+    use_q_criterion: true
+    use_enstrophy: true
+
+  tracking:
+    max_distance: 8.0
+    volume_overlap_threshold: 0.3
+
+  cooling_analysis:
+    mixing_axis: -1  # Last axis (z-direction)
+    threshold_lo: 0.2
+    threshold_hi: 0.8
+
+  output:
+    save_dir: "results/"
+    save_vortex_catalog: true
+    save_survival_curves: true
+    save_phase_diagram: true

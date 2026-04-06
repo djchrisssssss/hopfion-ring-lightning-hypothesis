@@ -1,0 +1,44 @@
+# Hydra config for FNO training on MHD_64 with helicity-aware metrics
+# Usage: python -m the_well.benchmark.train experiment=fno data=MHD_64 server=local
+
+defaults:
+  - _self_
+
+experiment:
+  name: hopfion_mhd64_fno
+  seed: 42
+
+data:
+  dataset_name: MHD_64
+  base_path: "hf://datasets/polymathic-ai/"
+  n_steps_input: 4
+  n_steps_output: 1
+  batch_size: 8
+  num_workers: 4
+
+model:
+  name: FNO
+  n_modes: [16, 16, 16]
+  hidden_channels: 64
+  n_layers: 4
+  lifting_channels: 128
+  projection_channels: 128
+
+optimizer:
+  name: AdamW
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+
+scheduler:
+  name: CosineAnnealingLR
+  T_max: 100
+  eta_min: 1.0e-6
+
+trainer:
+  max_epochs: 100
+  val_frequency: 5
+  rollout_frequency: 20
+  gradient_clip_val: 1.0
+
+# Custom: helicity conservation auxiliary loss weight
+helicity_loss_weight: 0.1
