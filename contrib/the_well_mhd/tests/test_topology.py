@@ -48,17 +48,17 @@ class TestMorphologyClassification:
         eigenvalues = np.array([1.0, 1.0, 1.0])
         assert _classify_morphology(eigenvalues) == "blob"
 
-    def test_ring(self):
-        """One small eigenvalue, two large → ring."""
+    def test_tube(self):
+        """One small eigenvalue, two large → tube (prolate/rod)."""
         eigenvalues = np.array([0.05, 0.475, 0.475]) * 3
         morphology = _classify_morphology(eigenvalues, ring_threshold=0.3)
-        assert morphology == "ring"
+        assert morphology == "tube"
 
-    def test_tube(self):
-        """One large eigenvalue, two small → tube."""
+    def test_ring(self):
+        """One large eigenvalue, two small → ring (oblate/disk)."""
         eigenvalues = np.array([0.1, 0.1, 10.0])
         morphology = _classify_morphology(eigenvalues, tube_threshold=3.0)
-        assert morphology == "tube"
+        assert morphology == "ring"
 
 
 class TestInertiaEigenvalues:

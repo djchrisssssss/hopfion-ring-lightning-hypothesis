@@ -165,15 +165,19 @@ def _classify_morphology(
 
     Eigenvalues are sorted ascending: λ₁ ≤ λ₂ ≤ λ₃.
 
+    For an inertia tensor, the eigenvalue corresponding to a symmetry
+    axis is small when mass is concentrated near that axis (rod/tube)
+    and large when mass is spread away from it (ring/disk).
+
     Classification:
-        - Ring/oblate: λ₁ << λ₂ ≈ λ₃ (one small, two large)
-        - Tube/prolate: λ₁ ≈ λ₂ << λ₃ (two small, one large)
+        - Tube/prolate: λ₁ << λ₂ ≈ λ₃ (one small, two large — rod along λ₁ axis)
+        - Ring/oblate: λ₁ ≈ λ₂ << λ₃ (two small, one large — disk in λ₁-λ₂ plane)
         - Blob/spherical: λ₁ ≈ λ₂ ≈ λ₃ (all similar)
 
     Args:
         eigenvalues: Sorted eigenvalues (ascending), shape (3,).
-        ring_threshold: Ratio threshold for ring detection.
-        tube_threshold: Ratio threshold for tube detection.
+        ring_threshold: Normalized eigenvalue ratio threshold for tube detection.
+        tube_threshold: Eigenvalue ratio threshold for ring detection.
 
     Returns:
         Morphology string: "ring", "tube", or "blob".
@@ -187,14 +191,15 @@ def _classify_morphology(
     # Normalized eigenvalues
     n1, n2, n3 = e1 / total, e2 / total, e3 / total
 
-    # Ring: smallest eigenvalue is much smaller than the other two
-    # (disk-like: rotation around smallest axis gives ring)
+    # Tube/prolate: smallest eigenvalue << other two (which are similar)
+    # A rod along axis 1 has small I_11 and large, equal I_22 ≈ I_33
     if n1 < ring_threshold and abs(n2 - n3) / max(n3, 1e-10) < 0.5:
-        return "ring"
-
-    # Tube: largest eigenvalue is much larger than the other two
-    if n3 / max(n2, 1e-10) > tube_threshold:
         return "tube"
+
+    # Ring/oblate: largest eigenvalue >> other two (which are similar)
+    # A disk/ring in the 1-2 plane has large I_33 and smaller I_11 ≈ I_22
+    if n3 / max(n2, 1e-10) > tube_threshold:
+        return "ring"
 
     return "blob"
 

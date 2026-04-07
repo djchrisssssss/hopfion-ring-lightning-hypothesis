@@ -176,7 +176,7 @@ def compute_helical_decomposition(
     # Realizability ratio: |H_m(k)| / (2 E_B(k) / k) = |E⁺ - E⁻| / (E⁺ + E⁻)
     realizability_k = np.where(
         E_total_k > 1e-30,
-        np.abs(E_plus_k - E_minus_k) / E_total_k,
+        np.abs(E_plus_k - E_minus_k) / (2.0 * E_total_k),
         0.0,
     )
 

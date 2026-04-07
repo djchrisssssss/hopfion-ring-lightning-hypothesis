@@ -64,7 +64,7 @@ def compute_vector_potential(
     """Compute vector potential A from magnetic field B in Coulomb gauge.
 
     Uses spectral method on periodic domain:
-        B̂(k) = ik × Â(k)  →  Â(k) = -ik × B̂(k) / |k|²
+        B̂(k) = ik × Â(k)  →  Â(k) = i(k × B̂(k)) / |k|²
 
     The Coulomb gauge (∇·A = 0) is automatically satisfied since
     k · Â(k) = 0 by construction.
