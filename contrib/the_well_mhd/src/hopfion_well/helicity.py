@@ -357,21 +357,33 @@ def generate_hopf_ranada_field(
 def extract_b_field_from_well(
     sample: dict,
     field_name: str = "magnetic_field",
+    channel_slice: slice | None = None,
 ) -> NDArray[np.float64]:
     """Extract magnetic field from a WellDataset sample in (3, Nx, Ny, Nz) format.
 
     The Well stores fields as (..., Nx, Ny, Nz, C) where C is the
     number of components. We reshape to (C, Nx, Ny, Nz).
 
+    For multi-field tensors (e.g. MHD_64 with 7 channels = density(1) +
+    velocity(3) + magnetic_field(3)), use ``channel_slice`` to select the
+    magnetic field channels. If not provided, the function auto-detects
+    based on the known layout: channels 4:7 for 7-channel MHD data.
+
     Args:
         sample: A sample dict from WellDataset.
         field_name: Name of the magnetic field in the dataset.
+        channel_slice: Explicit slice for the channel axis (last dim).
+            E.g. ``slice(4, 7)`` for MHD_64. If None, auto-detected.
 
     Returns:
         B: Magnetic field array, shape (3, Nx, Ny, Nz).
     """
-    # WellDataset returns tensors with shape (T, Nx, Ny, Nz, C)
-    # For input_fields dict, keys are field names
+    # Known multi-channel layouts: total_channels -> B-field slice
+    _KNOWN_LAYOUTS: dict[int, slice] = {
+        7: slice(4, 7),   # MHD_64/256: density(1) + velocity(3) + B(3)
+        4: slice(1, 4),   # Some datasets: density(1) + B(3)
+    }
+
     try:
         import torch
         has_torch = True
@@ -407,6 +419,24 @@ def extract_b_field_from_well(
     # If first dim is 3, already channels-first
     elif data.shape[0] == 3:
         pass
+    # Multi-channel tensor: extract B-field channels
+    elif data.ndim == 4:
+        n_channels = data.shape[-1]
+        if channel_slice is not None:
+            data = data[..., channel_slice]
+        elif n_channels in _KNOWN_LAYOUTS:
+            data = data[..., _KNOWN_LAYOUTS[n_channels]]
+        else:
+            raise ValueError(
+                f"Cannot determine magnetic field channels from shape {data.shape}. "
+                f"Known layouts: {list(_KNOWN_LAYOUTS.keys())} channels. "
+                f"Pass channel_slice=slice(start, end) explicitly."
+            )
+        if data.shape[-1] != 3:
+            raise ValueError(
+                f"Channel slice produced {data.shape[-1]} components, expected 3"
+            )
+        data = np.moveaxis(data, -1, 0)
     else:
         raise ValueError(f"Cannot determine channel axis from shape {data.shape}")
 
