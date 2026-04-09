@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68.0", "setuptools-scm>=8.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hopfion-turb"
+version = "0.1.0"
+description = "Hopfion stability analysis in turbulent environments using The Well datasets"
+readme = "README.md"
+license = "BSD-3-Clause"
+requires-python = ">=3.10"
+authors = [
+    { name = "Kris Lai" },
+]
+dependencies = [
+    "the_well",
+    "torch>=2.1",
+    "numpy>=1.20",
+    "h5py>=3.9",
+    "scipy",
+    "matplotlib",
+    "plotly",
+    "scikit-image",
+]
+
+[project.optional-dependencies]
+benchmark = [
+    "the_well[benchmark]",
+    "hydra-core",
+    "omegaconf",
+    "wandb",
+]
+dev = [
+    "pytest",
+    "pytest-cov",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
