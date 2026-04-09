@@ -176,8 +176,10 @@ def _classify_morphology(
 
     Args:
         eigenvalues: Sorted eigenvalues (ascending), shape (3,).
-        ring_threshold: Normalized eigenvalue ratio threshold for tube detection.
-        tube_threshold: Eigenvalue ratio threshold for ring detection.
+        ring_threshold: Normalized smallest eigenvalue threshold. If λ₁/total < this,
+            structure may be prolate (tube). Named historically; controls tube branch.
+        tube_threshold: Ratio threshold λ₃/λ₂. If this ratio exceeds the value,
+            structure is oblate (ring). Named historically; controls ring branch.
 
     Returns:
         Morphology string: "ring", "tube", or "blob".

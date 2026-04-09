@@ -10,7 +10,6 @@ BASE_PATH="${1:-./data}"
 
 echo "=== Downloading MHD_64 ==="
 the-well-download --base-path "$BASE_PATH" --dataset MHD_64 --split train
-the-well-download --base-path "$BASE_PATH" --dataset MHD_64 --split valid
 the-well-download --base-path "$BASE_PATH" --dataset MHD_64 --split test
 
 echo ""

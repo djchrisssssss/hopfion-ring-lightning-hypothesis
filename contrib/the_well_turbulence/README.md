@@ -8,7 +8,7 @@ in the context of the [Hopfion Ring Lightning Hypothesis](../../README.md).
 
 ```bash
 # Install dependencies
-pip install the_well numpy scipy scikit-image matplotlib h5py
+pip install the_well torch numpy scipy scikit-image matplotlib plotly h5py
 
 # Run tests
 PYTHONPATH=src python -m pytest tests/ -v

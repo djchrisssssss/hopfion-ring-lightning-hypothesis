@@ -76,31 +76,21 @@ hopfion-ring-lightning-hypothesis/
           __init__.py
           helicity.py          # 磁螺旋度計算（H_m, Q_H）
           topology.py           # Hopf 荷偵測與分類
-          surrogate.py          # ML 模型訓練封裝
           spectral.py           # B 場拓撲頻譜分析
-          visualization.py      # 3D 場線與螺旋度密度視覺化
           energy_budget.py      # E_magnetic, E_kinetic 分解
       configs/
         mhd64_fno.yaml         # MHD_64 上 FNO 的 Hydra 配置
-        mhd64_unet.yaml        # MHD_64 上 UNet 的 Hydra 配置
-        mhd256_fno.yaml        # MHD_256 上 FNO 的 Hydra 配置
         helicity_scan.yaml     # 參數掃描配置
       notebooks/
-        01_helicity_survey.ipynb
-        02_hopfion_detection.ipynb
-        03_surrogate_training.ipynb
-        04_lifetime_analysis.ipynb
-        05_spectral_topology.ipynb
+        01_helicity_survey.py   # Jupytext 筆記本
       scripts/
         download_data.sh
         run_helicity_scan.py
-        run_training.py
-      results/
-        figures/
-        tables/
       tests/
         test_helicity.py
         test_topology.py
+        test_spectral.py
+        test_energy_budget.py
 ```
 
 ---
@@ -145,13 +135,15 @@ hopfion-ring-lightning-hypothesis/
    - 局域 Hopf 荷：Q_local = integral_V h(x) d^3x / (4*pi)^2
    - 長寬比（區分環形/管狀 vs 球狀）
    - 生命期：結構持續存在的連續時間步數
-4. **環形 vs 球狀分類**：
+4. **環形 vs 球狀分類**（特徵值升冪排列：λ₁ ≤ λ₂ ≤ λ₃）：
    - 計算慣性張量特徵值
-   - 環形拓撲：lambda_1 ~ lambda_2 >> lambda_3（扁平）
+   - 管狀拓撲：lambda_1 << lambda_2 ~ lambda_3（細長——一個小特徵值、兩個大特徵值）
+   - 環形拓撲：lambda_1 ~ lambda_2 << lambda_3（扁平——兩個小特徵值、一個大特徵值）
    - 球狀拓撲：lambda_1 ~ lambda_2 ~ lambda_3
 5. **相關性分析**：
    - 生命期 vs |Q_local| — 假說預測更高拓撲荷 → 更長生命期
    - 生命期 vs (Ms, Ma) — 哪種湍流態有利於拓撲穩定性？
+   - 結構類型 vs (Ms, Ma) — 何時出現環狀結構？
 
 **交付物**：拓撲結構目錄及其屬性、相關性圖表。
 
@@ -215,6 +207,7 @@ hopfion-ring-lightning-hypothesis/
 4. **關鍵量測**：
    - **螺旋度半衰期** tau_H：|H_m| 衰減至 50% 的時間
    - **拓撲保持時間** tau_T：Q_H 跨越整數邊界的時間
+   - **能量衰減率**：dE/dt 分解為磁能、動能、熱能通道
    - **關係驗證**：假說預測 tau_H >> tau_E（螺旋度比能量更持久）
 
 5. **問題 1 的直接檢驗**：
@@ -240,6 +233,11 @@ hopfion-ring-lightning-hypothesis/
 5. **時頻分析**：追蹤 P_h(k, t) 演化 — 螺旋度是否向大尺度遷移（逆級聯）？
 
 **交付物**：頻譜分析筆記本、螺旋分解結果、級聯方向辨識。
+
+**成功標準**：
+- 高 Q_H 與低 Q_H 態之間存在明確的頻譜特徵差異
+- 逆螺旋度級聯的證據（拓撲尺度的能量增長或維持）
+- 代理模型在每個 bin 內保持頻譜拓撲誤差 < 15%
 
 ---
 
@@ -273,6 +271,7 @@ hopfion-ring-lightning-hypothesis/
 | MHD_256 資料量過大無法本地處理 | 中 | 從 MHD_64 開始；使用 HuggingFace streaming；將 256^3 降採樣至 128^3 |
 | 代理模型無法保持拓撲 | 中 | 加入螺旋度守恆損失；使用 FNO（頻譜方法天然保持全域結構） |
 | 向量勢 A 的規範模糊性 | 低 | 週期性邊界條件 + 庫倫規範消除模糊性，用解析測試案例驗證 |
+| ML 展開在拓撲衰減前發散 | 中 | 使用 DeltaWellDataset 提高穩定性；限制展開至 50 步；使用 10% teacher forcing |
 
 ---
 

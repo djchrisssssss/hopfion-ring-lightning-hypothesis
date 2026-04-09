@@ -33,7 +33,7 @@ logger = logging.getLogger(__name__)
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Helicity survey on The Well MHD data")
     parser.add_argument("--dataset", default="MHD_64", choices=["MHD_64", "MHD_256"])
-    parser.add_argument("--split", default="train", choices=["train", "valid", "test"])
+    parser.add_argument("--split", default="train", choices=["train", "test"])
     parser.add_argument("--base-path", default=None, help="Local data path. If None, uses HF streaming.")
     parser.add_argument("--output-dir", default="results/", help="Output directory")
     parser.add_argument("--max-trajectories", type=int, default=None, help="Limit number of trajectories")

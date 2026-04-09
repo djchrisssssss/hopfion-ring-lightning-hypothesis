@@ -173,7 +173,7 @@ def compute_helical_decomposition(
     # Helicity spectrum: H_m(k) = (E⁺ - E⁻) / k
     H_m_k = np.where(k_mag > 0, (E_plus_k - E_minus_k) / k_safe, 0.0)
 
-    # Realizability ratio: |H_m(k)| / (2 E_B(k) / k) = |E⁺ - E⁻| / (E⁺ + E⁻)
+    # Realizability ratio: |H_m(k)| / (2k E_B(k)) = |E⁺ - E⁻| / (2(E⁺ + E⁻))
     realizability_k = np.where(
         E_total_k > 1e-30,
         np.abs(E_plus_k - E_minus_k) / (2.0 * E_total_k),

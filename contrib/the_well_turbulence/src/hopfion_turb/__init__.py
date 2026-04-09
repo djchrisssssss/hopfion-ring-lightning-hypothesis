@@ -27,6 +27,7 @@ from .cooling_analysis import (
 )
 from .boundary_layer import (
     compute_density_contrast,
+    compute_heat_flux_profile,
     compute_effective_insulation,
     compute_entrainment_rate,
     check_pressure_equilibrium,

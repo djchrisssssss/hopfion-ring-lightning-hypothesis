@@ -76,31 +76,21 @@ hopfion-ring-lightning-hypothesis/
           __init__.py
           helicity.py          # Magnetic helicity computation (H_m, Q_H)
           topology.py           # Hopf charge detection & classification
-          surrogate.py          # ML model training wrapper
           spectral.py           # Spectral analysis of B-field topology
-          visualization.py      # 3D field line & helicity density plots
           energy_budget.py      # E_magnetic, E_kinetic decomposition
       configs/
         mhd64_fno.yaml         # Hydra config for FNO on MHD_64
-        mhd64_unet.yaml        # Hydra config for UNet on MHD_64
-        mhd256_fno.yaml        # Hydra config for FNO on MHD_256
         helicity_scan.yaml     # Parameter scan config
       notebooks/
-        01_helicity_survey.ipynb
-        02_hopfion_detection.ipynb
-        03_surrogate_training.ipynb
-        04_lifetime_analysis.ipynb
-        05_spectral_topology.ipynb
+        01_helicity_survey.py   # Jupytext notebook
       scripts/
         download_data.sh
         run_helicity_scan.py
-        run_training.py
-      results/
-        figures/
-        tables/
       tests/
         test_helicity.py
         test_topology.py
+        test_spectral.py
+        test_energy_budget.py
 ```
 
 ### 3.2 Dependencies
@@ -186,11 +176,11 @@ ds = WellDataset(
    - Aspect ratio (distinguish ring/tube vs. blob)
    - Lifetime: number of consecutive timesteps where structure persists
 
-4. **Ring-vs-blob classification**:
+4. **Ring-vs-blob classification** (eigenvalues sorted ascending: λ₁ ≤ λ₂ ≤ λ₃):
    - Compute eigenvalues of inertia tensor for each structure
-   - Ring topology: lambda_1 ~ lambda_2 >> lambda_3 (oblate)
+   - Tube topology: lambda_1 << lambda_2 ~ lambda_3 (prolate — one small, two large)
+   - Ring topology: lambda_1 ~ lambda_2 << lambda_3 (oblate — two small, one large)
    - Blob topology: lambda_1 ~ lambda_2 ~ lambda_3 (spherical)
-   - Tube topology: lambda_1 >> lambda_2 ~ lambda_3 (prolate)
 
 5. **Correlation analysis**:
    - Lifetime vs. |Q_local| — the hypothesis predicts longer lifetime for higher topological charge
@@ -302,7 +292,7 @@ python train.py experiment=fno data=MHD_64 server=local
    - Hopfion structures should show strong alignment at the structure scale
 
 3. **Magnetic energy spectrum decomposition**:
-   - E_B(k) = |B_hat(k)|^2 / (2*mu_0)
+   - E_B(k) = 0.5 * |B_hat(k)|^2 (code units, mu_0 = 1)
    - Separate into: **helical part** (linked to H_m) and **non-helical part**
    - Method: E_B(k) = E_B^+(k) + E_B^-(k) using helical decomposition (Moffatt 1978)
    - Realizability condition: |H_m(k)| <= 2*k*E_B(k) — saturated when field is maximally helical

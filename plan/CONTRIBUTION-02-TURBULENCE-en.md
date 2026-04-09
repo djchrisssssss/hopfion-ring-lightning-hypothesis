@@ -105,29 +105,17 @@ hopfion-ring-lightning-hypothesis/
           structure_tracking.py   # Lagrangian tracking of coherent structures
           cooling_analysis.py     # Cooling time vs structure lifetime mapping
           boundary_layer.py       # Shear layer analysis for Hopfion boundary model
-          surrogate.py            # ML training wrapper
-          visualization.py        # Flow visualization and structure rendering
       configs/
-        tgc_unet.yaml            # Hydra config for turbulence_gravity_cooling
-        trl2d_fno.yaml           # Hydra config for turbulent_radiative_layer_2D
-        trl3d_tfno.yaml          # Hydra config for turbulent_radiative_layer_3D
         vortex_scan.yaml         # Structure detection parameter scan
       notebooks/
-        01_vortex_census.ipynb
-        02_cooling_stability.ipynb
-        03_boundary_layer_analysis.ipynb
-        04_surrogate_lifetime_predictor.ipynb
-        05_atmospheric_extrapolation.ipynb
+        01_vortex_census.py      # Jupytext notebook
       scripts/
-        download_data.sh
         run_vortex_detection.py
-        run_training.py
-      results/
-        figures/
-        tables/
       tests/
         test_vortex_detection.py
         test_structure_tracking.py
+        test_cooling_analysis.py
+        test_boundary_layer.py
 ```
 
 ### 4.2 Dependencies
@@ -169,15 +157,17 @@ dependencies = [
 
    b. **Enstrophy density**: xi = |omega|^2 = |curl(v)|^2
       - High enstrophy = strong rotation
-      - Threshold: xi > mu + 2*sigma
+      - Used as supplementary metric alongside Q-criterion
 
    c. **Pressure minima**: Vortex cores are local pressure minima
       - Cross-validate with Q-criterion for robust detection
 
+   Detection threshold: Q > mu + sigma_threshold * sigma (default sigma_threshold = 2.0)
+
 2. **Connected-component labeling** on thresholded Q > Q_threshold field
 
 3. **Structure tracking** across timesteps:
-   - Use overlap-based tracking: structure at t+1 matches structure at t if spatial overlap > 50%
+   - Centroid distance-based tracking with volume similarity: structure at t+1 matches if centroid distance < max_distance AND volume ratio > 0.3
    - Assign unique ID to each tracked structure
    - Record: birth time, death time, lifetime, peak Q, volume, centroid trajectory
 
