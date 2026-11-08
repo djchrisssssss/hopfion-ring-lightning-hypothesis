@@ -25,7 +25,7 @@
 | 4.3 "All MHD equations and topological claims are correct" | — | **WITHDRAWN** | See rows above |
 | 4.3 Optical-artifact explanation "original" | — | **QUALIFIED** | Now quantified (Appendix A); originality wording revised in Prior Art |
 
-**New quantitative findings** (all in hypothesis Ch. 6A / 8A / Appendix A): resistive decay time ~10⁻⁷ s at 4,200 K and ~10⁻⁴ s at 20,000 K for L = 0.1 m (5 s would need 7–170 × copper's conductivity; a solid copper ball of that size loses its internal field energy in 30–60 ms); magnetic energy 0.3–33 J at 10–100 mT for a 25 cm body; geomagnetic helicity injection ~200 × too small; a 4,200 K pressure-balanced body would rise at ~2.5 m/s; a torus with R ≥ a looks round from ≤ 30% of viewing directions.
+**New quantitative findings** (all in hypothesis Ch. 6A / 8A / Appendix A): resistive decay time ~10⁻⁷ s at 4,200 K and ~10⁻⁴ s at 20,000 K for L = 0.1 m (5 s would need 7–170 × copper's conductivity; in a solid copper ball of that size the internal field energy e-folds in 30–60 ms); magnetic energy 0.3–33 J at 10–100 mT for a 25 cm body; geomagnetic helicity injection ~200 × too small; a 4,200 K pressure-balanced body would rise at ~1.7–2.5 m/s; a torus with R ≥ a looks round from ≤ 30% of viewing directions.
 
 **Reference and data corrections**: see §0.1.
 

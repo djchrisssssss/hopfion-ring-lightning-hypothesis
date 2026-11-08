@@ -8,7 +8,7 @@
 
 A theoretical hypothesis proposing that so-called "Ball Lightning" is a **Hopfion (Ring) Lightning** — a compact toroidal plasma structure whose magnetic field lines are linked (nonzero magnetic helicity), contained by the surrounding atmosphere's pressure. The observed round appearance is proposed to come from a thick luminous torus seen through its own glow.
 
-> **v0.8 (2026-11-07) is a correction release.** A physics re-audit found that topology alone cannot explain multi-second lifetimes: at the measured ~4,200 K, air plasma's resistive decay time for a 10 cm structure is ~10⁻⁷ s, and a 5 s lifetime would need a conductivity above that of copper. This is now stated as the hypothesis's central open problem, alongside corrected formulas and self-consistent predictions. See [What Changed in v0.8](./markdown/en/hypothesis-en.md#what-changed-in-v08).
+> **v0.8 (2026-11-07) is a correction release.** A physics re-audit found that topology alone cannot explain multi-second lifetimes: at v0.7's reference temperature of ~4,200 K (not a measured value), air plasma's resistive decay time for a 10 cm structure is ~10⁻⁷ s, and a 5 s lifetime would need a conductivity above that of copper. This is now stated as the hypothesis's central open problem, alongside corrected formulas and self-consistent predictions. See [What Changed in v0.8](./markdown/en/hypothesis-en.md#what-changed-in-v08).
 
 > This is a living document. Contributions, critiques, and falsification attempts are welcome.
 
@@ -60,7 +60,7 @@ The v0.7 verification (2026-03-12) reported:
 
 - **Chapter 0 — Preface** — From lightning to a ring-shaped energy body
 - **Chapter 1 — Redefining Ball Lightning** — The misread appearance, bubble ring analogy, core claim
-- **Chapter 2 — Hopfion (Ring) Structure** — Topological self-closure, Hopf charge, energy-closure mechanism
+- **Chapter 2 — Hopfion (Ring) Structure** — Helicity vs Hopf invariant; stability ingredients (atmospheric confinement)
 - **Chapter 3 — Abstract** — Core hypothesis statement and topological invariant
 - **Chapter 4 — Governing Equations** — MHD formulation for Hopfion (Ring) Lightning
 - **Chapter 5 — Topological Features** — Self-closed ring loops, Hopf linking, toroidal core
@@ -77,8 +77,6 @@ The v0.7 verification (2026-03-12) reported:
 ---
 
 ## Key Equation
-
-The core topological invariant (Hopf charge):
 
 The core topological quantity (magnetic helicity, a flux-weighted count of how field lines link):
 

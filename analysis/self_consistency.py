@@ -19,7 +19,7 @@ M_AIR = 0.029
 
 R_BALL = 0.125           # m, 25 cm diameter reference body
 V_BALL = 4 / 3 * math.pi * R_BALL**3
-T_CORE = 4200.0          # K, measured ball-lightning temperature quoted in the hypothesis
+T_CORE = 4200.0          # K, v0.7 reference temperature (not measured; An et al. 2022 give 4,330-8,750 K for one event)
 L_SCALE = 0.1            # m, field gradient scale used for decay times
 
 
@@ -97,6 +97,12 @@ def main():
     for v in (1.0, 300.0):
         for eta in (80.0, 1e5):
             print(f"Rm (v = {v:.0f} m/s, L = {L_SCALE} m, eta_m = {eta:.0e} m^2/s) = {v * L_SCALE / eta:.1e}")
+
+    header("8A.5 Power to sustain 10 mT against Ohmic loss (lowest decay modes)")
+    w10 = 0.01**2 / (2 * MU0) * V_BALL
+    for label, sigma in (("4200 K", rows[1][1]), ("2e4 K", 1e4)):
+        times = [MU0 * sigma * R_BALL**2 / ka**2 / 2 for ka in (math.pi, 4.493)]
+        print(f"{label}: energy e-fold {min(times):.1e}-{max(times):.1e} s -> power ~ {w10 / max(times):.0e}-{w10 / min(times):.0e} W")
 
     header("6A Helicity injection")
     phi = 0.05 * math.pi * R_BALL**2

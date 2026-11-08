@@ -20,7 +20,7 @@ v0.8 is a correction release. A physics re-audit found errors in v0.7, several o
 
 1. **Lifetime formula (Ch. 8).** v0.7's τ ∝ L / P_dissipation, with L the angular momentum, has units of s², not s. It is replaced by τ ≈ E / P_loss. The unsupported "L ≈ 10⁻³ kg·m²/s ⇒ τ ≈ 5–10 s" is withdrawn.
 2. **Helicity vs. Hopf charge (Ch. 2.2).** v0.7 used H_m and Q_H "interchangeably" via Q_H = H_m / (4π)². That relation holds only for a dimensionless field built from a unit-vector map. For a physical magnetic field, H_m has units of Wb² and equals a flux-weighted sum of linking numbers.
-3. **When topology protects (Ch. 4, 8A).** Helicity is conserved only when the magnetic Reynolds number Rm ≫ 1. For air plasma at a few thousand kelvin (v0.7 used ~4,200 K), Rm ≪ 1 and the resistive decay time of a 10 cm structure is ~10⁻⁷ s; even at 20,000 K it is ~10⁻⁴ s. A 5 s lifetime would need an electrical conductivity 7–170 times that of copper — and a solid copper ball of the same size loses its internal magnetic energy in 30–60 ms. This is now stated as the hypothesis's central open problem.
+3. **When topology protects (Ch. 4, 8A).** Helicity is conserved only when the magnetic Reynolds number Rm ≫ 1. For air plasma at a few thousand kelvin (v0.7 used ~4,200 K), Rm ≪ 1 and the resistive decay time of a 10 cm structure is ~10⁻⁷ s; even at 20,000 K it is ~10⁻⁴ s. A 5 s lifetime would need an electrical conductivity 7–170 times that of copper — and in a solid copper ball of the same size the internal magnetic energy e-folds in 30–60 ms. This is now stated as the hypothesis's central open problem.
 4. **Confinement (Ch. 2.3, 4).** By the magnetic virial theorem, a magnetized plasma cannot confine itself. The pressure of the surrounding atmosphere must do it. Statements that the structure needs "no container or external field" are corrected.
 5. **Predictions made self-consistent (Ch. 10).** The v0.7 rotation speed (500–2,000 m/s) is incompatible with the predicted 10–100 mT field: it exceeds the Alfvén speed, is supersonic in the ambient air, and its centrifugal pressure exceeds the magnetic pressure by factors of 5 to 85 even at 100 mT. It is replaced by v ≲ v_A ≈ 30–300 m/s. Because rotation broadening is unmeasurable at 1 atm, the spectral signature is changed to Zeeman circular polarization.
 6. **"The sphere is an optical artifact" (Ch. 1.1, Appendix A).** Now quantified: a torus with major radius R ≥ minor radius a looks clearly non-circular from most viewing directions. The claim survives only for a fat torus inside a surrounding glow comparable to its size — a near-spherical luminous body with toroidal internal structure.
@@ -83,11 +83,11 @@ It is proposed to be an energy bubble formed by atmospheric plasma under topolog
 
 ### 2.1 — Theoretical Background
 
-A Hopfion is a field configuration whose topology is classified by the Hopf invariant, which Heinz Hopf (1931) [16] introduced for continuous mappings from the 3-sphere to the 2-sphere (S³ → S²). As stable field-theory objects, hopfions were proposed by Faddeev in the 1970s and first computed as stable knotted solitons by Faddeev and Niemi (1997) [18].
+A Hopfion is a field configuration whose topology is classified by the Hopf invariant, which Heinz Hopf (1931) [16] introduced for continuous mappings from the 3-sphere to the 2-sphere (S³ → S²). As stable field-theory objects, hopfions were proposed by Faddeev in the 1970s and as stable knot-like solitons by Faddeev and Niemi (1997) [18].
 
 In physics, a Hopfion can be understood as a configuration in which field lines form ring-like linking. When such a configuration occurs in a plasma, the linking is preserved for as long as the magnetic field stays frozen into a highly conducting medium. It is then a **topologically constrained ring-shaped energy body**.
 
-**Terminology note (v0.8).** "Soliton" is used loosely in this document. In the Faddeev–Niemi model, stability and a preferred size come from a higher-derivative (Skyrme-like) term that evades Derrick's scaling theorem [18, 39]. MHD has no such term: helicity forbids unlinking but sets no size, and a magnetized plasma can always lower its energy by expanding (Arnold's inequality bounds the energy from below only for a fixed volume [36]). Here "soliton" therefore means "coherent, self-organized structure", not a topological soliton in the strict field-theory sense.
+**Terminology note (v0.8).** "Soliton" is used loosely in this document. In the Faddeev–Niemi model, stability and a preferred size come from a higher-derivative (Skyrme-like) term that evades Derrick's scaling theorem [18, 39]. MHD has no such term: helicity forbids unlinking but sets no size, and a magnetized plasma can always lower its energy by expanding (Arnold's inequality bounds the energy from below only for a fixed volume [36]). Topology alone does not confine: Ranada's vacuum knots and the linked beams of light of [20] keep their Hopf index exactly, yet spread at the speed of light [8, 20]. Here "soliton" therefore means "coherent, self-organized structure", not a topological soliton in the strict field-theory sense.
 
 ### 2.2 — Mathematical Definition and Topological Charge
 
@@ -132,7 +132,7 @@ The bubble-ring analogy holds here too: the surrounding water's pressure contain
 
 Hopfion-type structures have been realized or simulated in several systems:
 
-- Spin hopfions in magnetic multilayers [30] and hopfion rings in a cubic chiral magnet [32];
+- Spin hopfions in magnetic multilayers [30] and hopfion rings in a cubic chiral magnet [32] (review: [35]);
 - Knot solitons in Bose–Einstein condensates [28, 29];
 - Three-dimensional topological solitons in chiral liquid crystals [33, 34];
 - Optical skyrmionic hopfions in structured light [31];
@@ -158,15 +158,15 @@ and that its round appearance comes from a thick torus seen through its own glow
 
 In this picture the atmosphere's pressure contains the structure, while helicity organizes its internal field and constrains how it relaxes and splits.
 
-The v0.8 audit shows that this topological constraint is effective only if the plasma's magnetic Reynolds number is large. For air plasma at any plausible ball-lightning temperature it is far below one, and the resistive decay time of a 10 cm structure lies between ~10⁻⁷ s (at 4,200 K) and ~10⁻⁴ s (at 20,000 K) (Ch. 8A). Explaining multi-second lifetimes therefore requires a mechanism beyond topology; this is the hypothesis's central open problem.
+The v0.8 audit shows that this topological constraint is effective only if the plasma's magnetic Reynolds number is large. For air plasma at any plausible ball-lightning temperature it is below one (≤ 0.4 even in the most favourable case, ~10⁻⁴ at 4,200 K), and the resistive decay time of a 10 cm structure lies between ~10⁻⁷ s (at 4,200 K) and ~10⁻⁴ s (at 20,000 K) (Ch. 8A). Explaining multi-second lifetimes therefore requires a mechanism beyond topology; this is the hypothesis's central open problem.
 
-The model's distinctive, testable signatures are a toroidal internal structure, a measurable magnetic field and its decay history, and helicity-consistent splitting (Ch. 10).
+The model's distinctive, testable signatures are a toroidal internal structure, a measurable magnetic field and its decay history, and, if Rm ≫ 1 during splitting, helicity-consistent splitting (Ch. 10).
 
 ---
 
 ## Chapter 4 — Core Statements and Governing Equations: MHD for Hopfion (Ring) Lightning
 
-At atmospheric pressure the plasma is highly collisional, so a fluid (MHD) description is appropriate. The governing equations of compressible resistive MHD are:
+At atmospheric pressure the plasma is highly collisional, so a fluid (MHD) description is appropriate. The governing equations of compressible resistive MHD are [37]:
 
 ```
 ∇ · B = 0,        J = (∇ × B) / μ₀
@@ -260,7 +260,7 @@ The weights below are the author's qualitative assessment. They are not derived 
 
 ## Chapter 8 — Lifetime: A Topologically Constrained Energy Bubble?
 
-Non-equilibrium discharge plasma in air recombines within milliseconds. A hot gas ball in local thermal equilibrium, by contrast, stays luminous as long as it stays hot: conduction alone would take ~1–8 s to cool a 25 cm ball, and the faster loss is buoyant mixing (~0.1–1 s; Ch. 8A.2). Ball lightning is reported to last seconds. The lifetime of any structure is its stored energy divided by its total loss rate:
+Non-equilibrium discharge plasma in air recombines within milliseconds. A hot gas ball in local thermal equilibrium, by contrast, stays luminous as long as it stays hot: conduction alone would cool a 25 cm ball only over a time of order seconds, and the faster loss is buoyant rise and mixing (the body rises its own diameter in ~0.1 s; Ch. 8A.2). Ball lightning is reported to last seconds. The lifetime of any structure is its stored energy divided by its total loss rate:
 
 ```
 τ ≈ E_stored / P_loss
@@ -275,7 +275,7 @@ For the magnetic structure itself, the relevant time is the resistive decay time
 
 ## Chapter 8A — Quantitative Self-Consistency Checks (added in v0.8)
 
-Reference body: diameter 25 cm (V = 8.2 × 10⁻³ m³), temperature 4,200 K (v0.7's value; the spectral study of the best-documented event gives ~4,300–4,600 K from Si I and Fe I lines and ~8,750 K from O I lines [46]), pressure 1 atm. Pressure balance then gives a density of ~0.08 kg/m³ (6–7% of ambient air, depending on O₂ dissociation) and a mass of ~0.6–0.7 g. None of the conclusions below depends on the exact temperature: the table in 8A.1 spans 3,000–20,000 K. All numbers are reproduced by [`analysis/self_consistency.py`](../../analysis/self_consistency.py).
+Reference body: diameter 25 cm (V = 8.2 × 10⁻³ m³), temperature 4,200 K (v0.7's value; the spectral study of the best-documented event gives ~4,300–4,600 K from Si I and Fe I lines and ~8,750 K from O I lines [46]), pressure 1 atm. Pressure balance then gives a density of ~0.08 kg/m³ (6–7% of ambient air, depending on O₂ dissociation) and a mass of ~0.6–0.7 g. None of the conclusions below depends on the exact temperature: the table in 8A.1 spans 3,000–20,000 K. Most numbers in this chapter are reproduced by [`analysis/self_consistency.py`](../../analysis/self_consistency.py).
 
 ### 8A.1 — Resistive Lifetime and Magnetic Reynolds Number
 
@@ -284,15 +284,15 @@ Reference body: diameter 25 cm (V = 8.2 × 10⁻³ m³), temperature 4,200 K (v0
 | 3,000 K equilibrium air (estimate) | ~0.4 | ~2 × 10⁶ | ~5 × 10⁻⁹ s |
 | 4,200 K equilibrium air (estimate; ionization ~10⁻⁵) | ~7 | ~1 × 10⁵ | ~1 × 10⁻⁷ s |
 | 6,000 K equilibrium air (estimate) | ~4 × 10² | ~2 × 10³ | ~5 × 10⁻⁶ s |
-| 10,000 K equilibrium air [42] | ~3 × 10³ | ~3 × 10² | ~4 × 10⁻⁵ s |
-| 20,000 K equilibrium air [42] | ~1 × 10⁴ | ~80 | ~1 × 10⁻⁴ s |
+| 10,000 K equilibrium air (order of magnitude; cf. [42]) | ~3 × 10³ | ~3 × 10² | ~4 × 10⁻⁵ s |
+| 20,000 K equilibrium air (order of magnitude; cf. [42]) | ~1 × 10⁴ | ~80 | ~1 × 10⁻⁴ s |
 | **Required for τ_η = 5 s** | **~4 × 10⁸** | **~2 × 10⁻³** | **5 s** |
 
 The 3,000–6,000 K rows are order-of-magnitude estimates (Saha equilibrium with NO at ~3% of molecules plus 1 ppm sodium; electron–neutral collision cross-section ~10⁻¹⁹ m²). Soil vapour of the kind seen in [1] (Si, Fe, Ca) could raise σ at ~4,000 K to ~10² S/m, and full ionization at that temperature cannot exceed the Spitzer value of ~10³ S/m [43]; neither changes the conclusion.
 
-The crude estimate τ_η ≈ μ₀σL² is generous. The lowest free-decay mode of a conducting sphere of radius a decays as τ = μ₀σa²/(ka)² with ka ≈ π–4.5, and the magnetic energy and helicity e-fold in half that time. For a = 12.5 cm this shortens the decay times above by a factor of ~10–20, and raises the conductivity needed for a 5 s energy lifetime to ~5 × 10⁹–1 × 10¹⁰ S/m. **The required conductivity is therefore 7 times (crude estimate) to ~170 times (lowest decay mode) that of copper** (6 × 10⁷ S/m). For comparison, a solid copper ball 25 cm across loses its internal magnetic energy in 30–60 ms.
+The crude estimate τ_η ≈ μ₀σL² is generous. The lowest free-decay modes of a conducting sphere of radius a (poloidal ka = π, toroidal ka ≈ 4.49) decay as τ = μ₀σa²/(ka)², and the magnetic energy and helicity e-fold in half that time. For a = 12.5 cm this shortens the decay times above by a factor of ~13–26, and raises the conductivity needed for a 5 s energy lifetime to ~5 × 10⁹–1 × 10¹⁰ S/m. **The required conductivity is therefore 7 times (crude estimate) to ~170 times (lowest decay modes) that of copper** (6 × 10⁷ S/m). For comparison, in a solid copper ball 25 cm across the internal magnetic energy e-folds in 30–60 ms.
 
-The magnetic Reynolds number Rm = vL/η_m, with L = 0.1 m, is at most ~0.4 even for v = 300 m/s (the Alfvén-limited maximum, 8A.3) and the most favourable η_m ≈ 80 m²/s. At 4,200 K it is ~10⁻⁴ or less. The field is therefore not frozen into the plasma, helicity is not conserved over the observed lifetime, and **topological protection does not operate**.
+The magnetic Reynolds number Rm = vL/η_m, with L = 0.1 m, is at most ~0.4 even for v = 300 m/s (the Alfvén-limited maximum, 8A.3) and the most favourable η_m ≈ 80 m²/s. At 4,200 K it is ≲ 3 × 10⁻⁴. The field is therefore not frozen into the plasma, helicity is not conserved over the observed lifetime, and **topological protection does not operate**.
 
 Nor can the field act as thermal insulation, as v0.7's Ch. 8 suggested ("topological structure suppresses radial diffusion"). At 10–100 mT the electron Hall parameter ω_ce/ν_en is only ~0.03–0.3, the ions are far less magnetized, and the neutral gas — 99.999% of the particles at 4,200 K — does not feel the field at all.
 
@@ -313,7 +313,7 @@ Two tempting escape routes do not work:
 
 Survey-based estimates put the most probable energy at ~6–7 kJ [45]. If energies of that order are real, the magnetic field cannot be the reservoir. At most it shapes or insulates energy stored thermally or chemically.
 
-Thermal storage raises its own problem: **buoyancy**. A pressure-balanced 4,200 K body has 6–7% of the ambient density and would rise at ~2–2.5 m/s (drag coefficient 0.5–1), covering its own diameter in ~0.1 s, whereas about half of reports describe mostly horizontal motion [4]. An isolated current system in the nearly uniform geomagnetic field feels a torque but no net force, so the field cannot cancel buoyancy; a net electric charge in the ambient electric field, or an unmodelled mass load such as soil-derived particles, would have to.
+Thermal storage raises its own problem: **buoyancy**. A pressure-balanced 4,200 K body has 6–7% of the ambient density and would rise at ~1.7–2.5 m/s (drag coefficient 1–0.5), covering its own diameter in ~0.1 s, whereas about half of reports describe mostly horizontal motion [4]. An isolated current system in the nearly uniform geomagnetic field feels a torque but no net force, so the field cannot cancel buoyancy; a net electric charge in the ambient electric field, or an unmodelled mass load such as soil-derived particles, would have to.
 
 ### 8A.3 — Rotation–Field Consistency
 
@@ -323,11 +323,11 @@ v0.7's predicted rotation of 500–2,000 m/s is:
 
 - super-Alfvénic, so the flow would wind up and dominate the field rather than be organized by it;
 - faster than sound in the ambient air (343 m/s), so it should radiate strong acoustic noise, whereas ball lightning is mostly described as nearly silent;
-- impossible to contain: its centrifugal pressure ρv² = 0.2–3.3 atm exceeds the magnetic pressure at 100 mT (0.04 atm) by 5–85 times; balance would need B ≈ 0.23–0.92 T.
+- impossible to contain: its centrifugal pressure ρv² = 0.2–3.3 atm exceeds the magnetic pressure at 100 mT (0.04 atm) by 5–85 times; balance would need B ≈ 0.23–0.92 T. (Comparing with the magnetic tension B²/μ₀ instead — the criterion equivalent to v ≲ v_A — gives ~3–40 times and B ≈ 0.16–0.65 T; either way the field cannot hold the flow.)
 
 The prediction is therefore replaced by v ≲ v_A (Ch. 10).
 
-The bubble-ring analogy adds a sharper limit. If part of the internal flow is poloidal circulation — the flow that makes a smoke or bubble ring — the ring propels itself along its axis at a speed comparable to that circulation (~0.7× for the geometry here). Typical drift speeds of a few m/s [4, 45] therefore limit poloidal circulation to a few m/s.
+The bubble-ring analogy adds a sharper limit. If part of the internal flow is poloidal circulation — the flow that makes a smoke or bubble ring — the ring propels itself along its axis at a speed comparable to that circulation: the standard vortex-ring speed U = (Γ/4πR)[ln(8R/a) − ¼], with Γ = 2πa·v, gives U ≈ 0.7 v for a ring of major radius 7.5 cm and core radius 5 cm (Hill's spherical vortex gives ⅔). Typical drift speeds of a few m/s [4, 45] therefore limit poloidal circulation to a few m/s.
 
 ### 8A.4 — Comparison with Laboratory Spheromaks
 
@@ -337,11 +337,11 @@ Because the resistive decay time scales as T^(3/2), an atmospheric structure at 
 
 ### 8A.5 — Status after the v0.8 Audit
 
-In its v0.7 form — "topology alone gives seconds-long stability" — the hypothesis fails a quantitative self-consistency test: the resistive decay time falls short of observed lifetimes by four to eight orders of magnitude, depending on temperature. It can survive only in a modified form. Candidate directions, all open:
+In its v0.7 form — "topology alone gives seconds-long stability" — the hypothesis fails a quantitative self-consistency test: the resistive decay time falls short of observed lifetimes by four to nine orders of magnitude (crude estimate), depending on temperature. It can survive only in a modified form. Candidate directions, all open:
 
 1. **Topologically organized, non-magnetically powered.** Helicity shapes the structure during its first millisecond or less, while a thermal or chemical reservoir powers the long-lived glow (for example, oxidation of soil-derived particles as in [14]; soil-element lines were observed in [1]). Test: the magnetic field should decay within ≲1 ms of formation, long before the glow fades.
 2. **Non-MHD current carriers.** Currents carried by charged aerosols or nanoparticles, whose transport differs from that of free electrons. Speculative; no estimate yet.
-3. **Externally sustained.** Energy or current fed continuously by the ambient storm field, as in charge-deposition models [15]. The structure is then not self-contained, and its lifetime should correlate with the ambient field. Sustaining even 10 mT in a 25 cm body against Ohmic loss would take ~10⁵–10⁸ W, depending on conductivity.
+3. **Externally sustained.** Energy or current fed continuously by the ambient storm field, as in charge-deposition models [15]. The structure is then not self-contained, and its lifetime should correlate with the ambient field. Sustaining even 10 mT in a 25 cm body against Ohmic loss would take ~10⁴–10⁸ W (from 20,000 K down to 4,200 K).
 4. **Hydrodynamic ring.** A buoyant hot-gas thermal naturally rolls up into a vortex ring within a few diameters of rising. A ring morphology could therefore arise for purely hydrodynamic reasons, with zero magnetic helicity — consistent with the bubble-ring intuition, but not with topological protection, and in tension with reports of horizontal motion. Testable in laboratory plasmoids.
 
 Each direction changes what the hypothesis claims about energy and lifetime, so they are listed as open questions rather than as part of the hypothesis.
@@ -357,18 +357,18 @@ Each direction changes what the hypothesis claims about energy and lifetime, so 
 | Splitting events | Mechanism unclear | Splitting requires reconnection, which (at high Rm) approximately conserves total helicity: H_m ≈ H₁ + H₂ + 2Lk₁₂Φ₁Φ₂. Daughters should generally share the parent's handedness — testable in principle with vector magnetometry. (Integer additivity Q = Q₁ + Q₂ holds only for idealized Hopf-map fields) |
 | Long lifetime | Insufficient energy and confinement | **Not explained by topology alone** (Ch. 8A: τ_η ≪ 1 s). Central open problem |
 | Silent fade vs. explosive end | Unclear energy sink | Gradual decay → silent fade; sudden reconnection → abrupt end. But stored magnetic energy (≤ tens of J) cannot power kJ-scale explosions |
-| Motion along conductors | Lacks driver | Requires a net electric charge (image-charge attraction) — an added assumption, not part of the MHD picture. A magnetic dipole alone would be repelled, not attracted, by eddy currents in a non-ferromagnetic conductor |
+| Motion along conductors | Lacks driver | Requires a net electric charge (image-charge attraction) — an added assumption, not part of the MHD picture. A magnetic dipole alone, if moving or decaying, would be repelled, not attracted, by eddy currents in a non-ferromagnetic conductor |
 
 ---
 
 ## Chapter 10 — Falsifiable Predictions: Experimental Signatures of Hopfion (Ring) Lightning
 
-1. **Magnetic signature (the strongest and cheapest test).** Internal field 10–100 mT (an assumed scale, not derived). Its external (poloidal) part falls off roughly like a dipole: with 50 mT at the surface of a body of radius 12.5 cm, ~100 µT at 1 m and ~12 µT at 2 m; for 10–100 mT, ~20–200 nT at 10 m. That is comparable to or larger than the geomagnetic field at close range, measurable with fluxgate magnetometers, and — as a quasi-static signal lasting seconds — separable from the µs–ms transient of the return stroke. (A purely toroidal component would be invisible from outside.) Unless the open problem of Ch. 8A is solved, the field should decay within ≲1 ms; **the timing of the field's decay relative to the glow is the sharpest test.** A seconds-long field would overturn standard resistive-MHD expectations; its absence near well-instrumented events or laboratory analogues (water-discharge plasmoids [51], silicon-discharge balls [44], microwave fireballs [52]) would rule out all magnetically confined ball-lightning models, including this one.
+1. **Magnetic signature (the strongest and cheapest test).** Internal field 10–100 mT (an assumed scale, not derived). Its external (poloidal) part falls off roughly like a dipole: with 50 mT at the surface of a body of radius 12.5 cm, ~100 µT at 1 m and ~12 µT at 2 m; for 10–100 mT, ~20–200 nT at 10 m. That is comparable to or larger than the geomagnetic field at close range, measurable with fluxgate magnetometers, and — as a quasi-static signal lasting seconds — separable from the µs–ms transient of the return stroke. (A purely toroidal component would be invisible from outside.) Unless the open problem of Ch. 8A is solved, the field should decay within ≲1 ms; **the timing of the field's decay relative to the glow is the sharpest test.** A seconds-long field would overturn standard resistive-MHD expectations; its absence near well-instrumented natural events would rule out magnetically structured ball-lightning models, including this one. Laboratory analogues (water-discharge plasmoids [51], silicon-discharge balls [44], microwave fireballs [52]) can test only whether such plasmoids carry fields.
 2. **Rotation and polarization.** If rotation is present and organized by the field, it should be sub-Alfvénic: v ≲ v_A ≈ 30–300 m/s for 10–100 mT. The resulting Doppler shifts (≲ 6 × 10⁻⁴ nm at 600 nm) are below the thermal Doppler and pressure widths of emission lines at 4,000 K and 1 atm (several × 10⁻³ nm), so disk-integrated "rotation broadening" is not a usable signature. Rotation could be detected only as a spatially resolved limb-to-limb Doppler shift (resolving power ≳ 10⁵, realistic only for laboratory analogues) or through non-axisymmetric features in high-speed imaging — an axisymmetric, uniformly glowing torus spinning about its own axis looks static. The field itself can in principle be measured spectroscopically: Zeeman splitting (~2 × 10⁻⁴ to 2 × 10⁻³ nm at 10–100 mT) is unresolved, but a net line-of-sight field produces circular polarization (Stokes V) in line wings, detectable by spectropolarimetry. A purely toroidal field largely cancels in an unresolved observation.
 3. **Lifetime–size relation.** If lifetime were limited by resistive decay, τ ∝ L² at fixed temperature (τ_η = μ₀σL²). Survey data on lifetime versus diameter can test this scaling, although the absolute values (Ch. 8A) already disagree by many orders of magnitude.
 4. **Shape statistics.** If the luminous body is a torus with R ≳ a, high-speed images should show elongated outlines (axis ratio < 0.85) from most viewing directions and central dimming near face-on (Appendix A). Consistently round images from many angles would require a fat torus inside a glow, or falsify the visible-torus version.
 5. **Energy.** Magnetic energy at 10–100 mT is ≤ ~33 J for a 25 cm body. If damage-based energy estimates of kilojoules or more are confirmed, the field cannot be the main reservoir (Ch. 8A.2).
-6. **Handedness.** The sign of the helicity should be preserved through splitting; a pair of daughters with opposite handedness would contradict helicity-conserving splitting.
+6. **Handedness.** If Rm ≫ 1 during splitting (cf. 8A.1), the sign of the helicity should be preserved; a pair of daughters with opposite handedness would contradict helicity-conserving splitting.
 
 ---
 
@@ -402,7 +402,7 @@ The present work extends the Ranada-Trueba framework by:
 
 1. **Placing the Ranada–Trueba knots — already characterized by the Hopf index [8, 9] — within the broader hopfion literature**, including Faddeev-Niemi knot solitons [18] (v0.7's phrase "rather than generic electromagnetic knots" understated how much of the topology [8–10] already contained)
 2. **Drawing the bubble-ring analogy** for physical intuition — comparing the electromagnetic ring to a diver's bubble ring
-3. **Proposing that the observed sphere is a non-spinning thick luminous torus seen through its glow**, now with quantitative geometric constraints (Appendix A). Toroidal models of ball lightning predate this work — Johnson's toroidal-field model (1965) [48], Koloc's PLASMAK (a toroidal current ring inside a near-spherical plasma shell) [49], Seward's proposal that a spinning ring appears as a ball (1997) [50], and the linked-ring streamers of [11] — and ring- or torus-shaped ball lightning has occasionally been reported [47]. The contribution here is the specific geometric mechanism and its quantified, testable consequences, not the torus itself (v0.7 called it "an original observational prediction")
+3. **Proposing that the observed sphere is a thick luminous torus seen through its glow, whose round look does not rely on spin**, now with quantitative geometric constraints (Appendix A). Toroidal models of ball lightning predate this work — Johnson's toroidal-field model (1965) [48], Koloc's PLASMAK (a toroidal current ring inside a near-spherical plasma shell) [49], Seward's proposal that a spinning ring appears as a ball (1997) [50], and the linked-ring streamers of [11] — and ring- or torus-shaped ball lightning has occasionally been reported [47]. The contribution here is the specific geometric mechanism and its quantified, testable consequences, not the torus itself (v0.7 called it "an original observational prediction")
 4. **Connecting to recent hopfion observations** (2015–2023) in condensed matter, optics, and BEC systems [28–34], and to numerical MHD work [27], which were unavailable when the Ranada-Trueba model was formulated
 5. **Stating the model's quantitative self-consistency problems explicitly** (Ch. 6A, 8A)
 
@@ -424,7 +424,7 @@ Additional foundational contributions include the **Kamchatnov-Hopf topological 
 | **Falsifiable signature** | B-field magnitude and decay timing (magnetometry); toroidal structure in non-saturated high-speed imaging; handedness in splitting | Magnetic field measurement | Soil-element spectral lines | Force-free field measurement | Surface charge measurement |
 | **Experimental support** | Hopfion topology realized in BEC, magnets, liquid crystals, optics (2015–2023); no atmospheric evidence yet | Theoretical; BEC analog (2018) | Cen et al. 2014 spectral match [1]; lab Si discharge [44] | Theoretical | Eyewitness cases (aircraft) + electron/ion transport calculations; no lab test |
 
-**Other relevant models and laboratory analogues (added in v0.8).** Luminous balls lasting from tens of milliseconds to seconds have been made in the laboratory without any magnetic confinement: silicon-discharge balls 1–4 cm across lasting 2–5 s [44]; "Gatchina" water-discharge plasmoids up to ~0.2 m across lasting some hundreds of milliseconds, whose light comes mostly from chemiluminescence [51]; and microwave fireballs ~3 cm across lasting 30–40 ms after the power is switched off [52]. These are natural test beds for the magnetometry prediction of Ch. 10. For some sightings, a perceptual explanation has also been proposed: phosphenes induced by the lightning's magnetic pulse [53]; its corrected field estimates make this plausible only within a few metres of the strike, with retinal stimulation the more likely route [54].
+**Other relevant models and laboratory analogues (added in v0.8).** Luminous balls lasting from tens of milliseconds to seconds have been made in the laboratory without any magnetic confinement: silicon-discharge balls 1–4 cm across lasting several seconds [44]; "Gatchina" water-discharge plasmoids up to ~0.2 m across lasting some hundreds of milliseconds, whose light is dominated by CaOH band emission, tentatively attributed to chemiluminescence [51]; and microwave fireballs ~3 cm across lasting 30–40 ms after the power is switched off [52]. These are natural test beds for the magnetometry prediction of Ch. 10. For some sightings, a perceptual explanation has also been proposed: phosphenes induced by the lightning's magnetic pulse [53]; its corrected field estimates make this plausible only within a few metres of the strike, with retinal stimulation the more likely route [54].
 
 ---
 
@@ -595,9 +595,9 @@ These experimental milestones demonstrate that hopfion topology is physically re
 
 [39] Derrick, G.H. (1964). Comments on nonlinear wave equations as models for elementary particles. *J. Math. Phys.* 5, 1252-1254. DOI: [10.1063/1.1704233](https://doi.org/10.1063/1.1704233)
 
-[40] Freidberg, J.P. (2014). *Ideal MHD*. Cambridge University Press.
+[40] Freidberg, J.P. (2014). *Ideal MHD*. Cambridge University Press. DOI: [10.1017/CBO9780511795046](https://doi.org/10.1017/CBO9780511795046)
 
-[41] Rakov, V.A. & Uman, M.A. (2003). *Lightning: Physics and Effects*. Cambridge University Press.
+[41] Rakov, V.A. & Uman, M.A. (2003). *Lightning: Physics and Effects*. Cambridge University Press. DOI: [10.1017/CBO9781107340886](https://doi.org/10.1017/CBO9781107340886)
 
 [42] D'Angola, A. et al. (2008). Thermodynamic and transport properties in equilibrium air plasmas in a wide pressure and temperature range. *Eur. Phys. J. D* 46, 129-150. DOI: [10.1140/epjd/e2007-00305-4](https://doi.org/10.1140/epjd/e2007-00305-4)
 
@@ -607,7 +607,7 @@ These experimental milestones demonstrate that hopfion topology is physically re
 
 [45] Smirnov, B.M. (1992). Observational properties of ball lightning. *Sov. Phys. Usp.* 35, 650-670. DOI: [10.1070/PU1992v035n08ABEH002254](https://doi.org/10.1070/PU1992v035n08ABEH002254)
 
-[46] An, T., Yuan, P., Cen, J., Xue, S., Wan, R. & Deng, H. (2022). Temperature of apparent natural ball lightning obtained by examination of the spectra. *Phys. Plasmas* 29, 113503. DOI: [10.1063/5.0098329](https://doi.org/10.1063/5.0098329)
+[46] An, T., Yuan, P., Cen, J., Xue, S., Wan, R., Deng, H., Liu, G. & Wang, X. (2022). Temperature of apparent natural ball lightning obtained by examination of the spectra. *Phys. Plasmas* 29, 113503. DOI: [10.1063/5.0098329](https://doi.org/10.1063/5.0098329)
 
 [47] Keul, A.G. (1999). Two exceptional ball lightning cases. *J. Meteorol. (UK)* 24, 178-179.
 

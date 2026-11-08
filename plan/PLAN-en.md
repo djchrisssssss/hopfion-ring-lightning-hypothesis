@@ -14,7 +14,8 @@ v0.8 executed Phases 1–3 except the restructuring (3.2), which is deferred. Se
 2. **1.3 "Most promising" geomagnetic helicity injection.** Order-of-magnitude estimate: ~3 × 10⁻⁸ Wb², about 200 times less than the ~6 × 10⁻⁶ Wb² a 50 mT, 25 cm structure needs (Ch. 6A).
 3. **2.1 "τ_helicity / τ_energy = (αL)²".** Incorrect for a single force-free (Beltrami) mode: energy and helicity then decay at the same rate 2η_m α². Selective decay applies only to multi-scale (turbulent) fields.
 4. **2.2 acceptance criterion (≥ 60% of solid angle looks spherical).** Not met for R ≥ a (≤ 30%); only a fat torus (R ≲ 0.5 a) inside a glow comparable to its size looks round from most directions (Appendix A).
-5. **2.3 spheromak table.** β is ~100 at 50 mT if the total gas pressure is used (B²/2μ₀ ≈ 1% of 1 atm), not 1–10; the "neutral gas as wall" argument explains confinement but does nothing for resistive decay.
+5. **"Measured" 4,200 K (1.1-A, 1.2, 2.3, 3.1).** Cen et al. (2014) report no numerical temperature; the later spectral study of the same event gives ~4,300 K (Si I), ~4,600 K (Fe I), ~8,750 K (O I). Treat 4,200 K as a reference value only.
+6. **2.3 spheromak table.** β is ~100 at 50 mT if the total gas pressure is used (B²/2μ₀ ≈ 1% of 1 atm), not 1–10; the "neutral gas as wall" argument explains confinement but does nothing for resistive decay.
 
 ---
 

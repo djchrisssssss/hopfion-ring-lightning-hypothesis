@@ -8,7 +8,7 @@
 
 ## v0.8 Status Update (2026-11-07, Claude Opus 5.5 via Claude Code)
 
-The v0.8 re-audit worked through this list and found further problems. Problem 1 turned out to be worse than stated below: the η range 10²–10⁴ m²/s is optimistic. At the measured 4,200 K, air plasma is only ~10⁻⁵ ionized, η_m ≈ 10⁵ m²/s, and τ_η ≈ 10⁻⁷ s for L = 0.1 m — a gap of seven to eight orders of magnitude, not four to five.
+The v0.8 re-audit worked through this list and found further problems. Problem 1 turned out to be worse than stated below: the η range 10²–10⁴ m²/s is optimistic. At v0.7's reference temperature of 4,200 K (not measured by Cen et al.; the later spectral study of that event gives ~4,300–8,750 K), air plasma is only ~10⁻⁵ ionized, η_m ≈ 10⁵ m²/s, and τ_η ≈ 10⁻⁷ s for L = 0.1 m — a gap of seven to eight orders of magnitude, not four to five.
 
 | ID | Problem | v0.8 status | Where |
 |----|---------|-------------|-------|
@@ -198,7 +198,7 @@ The hypothesis would be vastly strengthened by even a simple 2D or 3D resistive 
 | ID | Problem | Priority | Category | Status (v0.8) |
 |----|---------|----------|----------|--------|
 | 1 | Resistive decay timescale (τ_η ~ 0.1 ms vs 5–10 s claimed; v0.8: ~10⁻⁷ s at 4,200 K) | **P0** | Quantitative self-consistency | Quantified, open |
-| 2 | Energy budget shortfall (14 J magnetic vs 8–80 kJ observed) | **P0** | Quantitative self-consistency | Quantified, open |
+| 2 | Energy budget shortfall (v0.8: 0.3–33 J magnetic vs ~6–7 kJ most probable; the v0.7 "8–80 kJ" had no source) | **P0** | Quantitative self-consistency | Quantified, open |
 | 3 | Helicity injection mechanism unspecified | **P0** | Causal chain | Partly quantified, open |
 | 4 | Lifetime formula is tautological (τ = E/P) | **P1** | Theoretical depth | Resolved |
 | 5 | Optical artifact claim lacks synthetic imaging | **P1** | Quantitative support | Partly resolved |
