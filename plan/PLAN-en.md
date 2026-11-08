@@ -6,6 +6,18 @@
 
 ---
 
+## v0.8 Execution Notes and Errata (2026-11-07, Claude Opus 5.5 via Claude Code)
+
+v0.8 executed Phases 1–3 except the restructuring (3.2), which is deferred. Several statements in this plan turned out to be wrong; do not reuse them:
+
+1. **1.1 Approach A (hot core).** Spitzer resistivity at 10⁵ K (8.6 eV) gives η_m ≈ 16 m²/s, not ~10⁻³ m²/s, so τ_η ≈ 0.6 ms for L = 0.1 m, not ~10 s. A 10⁵ K body at 1 atm is also not physically plausible (over-pressure, radiation). The acceptance criterion "τ_η ~ 1–10 s" was **not met** by any scenario.
+2. **1.3 "Most promising" geomagnetic helicity injection.** Order-of-magnitude estimate: ~3 × 10⁻⁸ Wb², about 200 times less than the ~6 × 10⁻⁶ Wb² a 50 mT, 25 cm structure needs (Ch. 6A).
+3. **2.1 "τ_helicity / τ_energy = (αL)²".** Incorrect for a single force-free (Beltrami) mode: energy and helicity then decay at the same rate 2η_m α². Selective decay applies only to multi-scale (turbulent) fields.
+4. **2.2 acceptance criterion (≥ 60% of solid angle looks spherical).** Not met for R ≥ a (≤ 30%); only a fat torus (R ≲ 0.5 a) inside a glow comparable to its size looks round from most directions (Appendix A).
+5. **2.3 spheromak table.** β is ~100 at 50 mT if the total gas pressure is used (B²/2μ₀ ≈ 1% of 1 atm), not 1–10; the "neutral gas as wall" argument explains confinement but does nothing for resistive decay.
+
+---
+
 ## Objective
 
 Resolve all 9 identified problems to upgrade the hypothesis from a "qualitative framework" to a "quantitatively self-consistent theoretical proposal" suitable for peer review.

@@ -7,6 +7,54 @@
 
 ---
 
+## 0. v0.8 Re-audit (2026-11-07)
+
+**Re-audited by**: Claude Opus 5.5 (Anthropic) via Claude Code — dimensional analysis, order-of-magnitude self-consistency calculations (reproducible: [`analysis/`](../../analysis/)), an independent referee-style physics review, and a re-check of references and observational figures against the cited sources.
+
+**Result**: the v0.7 verification below checked that references exist and that equations have textbook form, but it did not test dimensions or internal consistency. Several v0.7 verdicts are reversed:
+
+| v0.7 section | v0.7 verdict | v0.8 verdict | Correction (hypothesis v0.8) |
+|---|---|---|---|
+| 2.1 Helicity / Hopf charge | CORRECT | **INCORRECT** | Q_H = H_m/(4π)² applies only to dimensionless unit-vector (Hopf-map) fields; for a physical B, H_m (Wb²) = flux-weighted linking (Ch. 2.2) |
+| 2.2 MHD equations | CORRECT | **PARTLY INCORRECT** | Viscous term lacked ρ (ν is kinematic); incompressible form unsuitable for a body at 7% ambient density; compressible resistive MHD given (Ch. 4) |
+| 2.5 Electric-field threshold as "necessary" | CORRECT | **UNSUPPORTED** | Ground-level storm fields are ~10⁴ V/m; restated as a hypothesis with a test (Ch. 7) |
+| 2.6 Lifetime τ ∝ L/P "dimensionally correct" | CONSISTENT | **INCORRECT** | L/P has units s²; replaced by τ ≈ E/P_loss; "L ≈ 10⁻³ ⇒ 5–10 s" withdrawn (Ch. 8) |
+| 2.7 Field 10–100 mT | CONSISTENT | **ASSUMPTION** | Not derived; the cited "Fedosin" model is not a mainstream source. Kept as an assumed scale with consequences computed (Ch. 8A, 10) |
+| 2.8 Rotation 500–2,000 m/s | NEEDS CONTEXT ("internally consistent") | **INCONSISTENT** | Super-Alfvénic, supersonic, ρv² ≫ B²/2μ₀; replaced by v ≲ v_A ≈ 30–300 m/s (Ch. 8A.3, 10) |
+| 2.9 "Dissipation requires topological phase change" | CORRECT | **INCORRECT** | Energy can dissipate at constant helicity (Taylor relaxation) and by resistive diffusion; helicity conservation requires Rm ≫ 1, which fails by orders of magnitude (Ch. 5, 8A.1) |
+| 4.3 "All MHD equations and topological claims are correct" | — | **WITHDRAWN** | See rows above |
+| 4.3 Optical-artifact explanation "original" | — | **QUALIFIED** | Now quantified (Appendix A); originality wording revised in Prior Art |
+
+**New quantitative findings** (all in hypothesis Ch. 6A / 8A / Appendix A): resistive decay time ~10⁻⁷ s at 4,200 K and ~10⁻⁴ s at 20,000 K for L = 0.1 m (5 s would need 7–170 × copper's conductivity; a solid copper ball of that size loses its internal field energy in 30–60 ms); magnetic energy 0.3–33 J at 10–100 mT for a 25 cm body; geomagnetic helicity injection ~200 × too small; a 4,200 K pressure-balanced body would rise at ~2.5 m/s; a torus with R ≥ a looks round from ≤ 30% of viewing directions.
+
+**Reference and data corrections**: see §0.1.
+
+### 0.1 Reference and Observational-Data Corrections
+
+Checked against CrossRef metadata and, where accessible, the full texts (Cen et al. 2014, Rayle 1966, Smirnov 1992, Lowke et al. 2012, Lee et al. 2018, Sugic et al. 2021, Keul 1999).
+
+| Item | v0.7 | v0.8 |
+|---|---|---|
+| [2] Wang et al. 2018, DOI | 10.1063/1.5012129 — resolves to an unrelated *Chaos* paper; the v0.7 audit marked it VALID because it only checked that the DOI resolves | **10.1063/1.5019318** |
+| [5] Smirnov 1987, pages | 177–236 | **177–226** |
+| [7] Stenhoff 1999, publisher | Kluwer Academic | Kluwer Academic/Plenum |
+| [15] Lowke et al. 2012, authors | "et al." | Lowke, Smith, Nelson, Crompton & Murphy |
+| [38] Bellan 2000, publisher | World Scientific | **Imperial College Press** (full title added; DOI 10.1142/p121) |
+| [9], [22], [25], [37] | no DOI | DOIs added |
+| "Core temperature ~4,200 K — Cen et al. (2014)" | attributed to [1] | **Wrong attribution**: [1] reports no numerical temperature. The later spectral study of the same event [46] gives ~4,300 K (Si I), ~4,600 K (Fe I), ~8,750 K (O I), ~2,700 K (continuum) |
+| "Energy ~8–80 kJ — Abrahamson et al. (2002)" | uncited source | **No matching source.** Replaced by Smirnov (1992) [45]: most probable ~6–7 kJ, log-normal mean ~60 kJ |
+| "Luminous intensity ~1.24 × 10⁵ cd" as typical | typical | Maximum in the initial stage of one event; ~5.9 × 10⁴ cd for most of its lifetime [2] |
+| Diameter, lifetime, colour, motion, thunderstorm rows | partly unsupported | Re-sourced to Rayle [4] and Smirnov [45]; e.g. Rayle's median diameter ≈36 cm, 17% of his cases faster than 27 m/s, ~94% storm association in his sample vs 80 ± 10% in Smirnov |
+| "lab Si discharge [1]" | attributed to Cen et al. | Paiva et al. 2007 [44] |
+| Lowke model: "requires lightning strike — yes" | yes | Not necessarily (ion stream onto an insulating window; one case without a thunderstorm) |
+| Smiet et al. 2015 under "experimental" | experimental | Numerical simulation; table and section headings relabelled |
+| Lee et al. 2018 "matching" ball-lightning model | evidence-like wording | Quantum simulation with synthetic fields; not evidence about real ball lightning |
+| Sugic et al. 2021 "first" | first | No "first" claim in the source; dropped |
+| "Original observational prediction" (torus) | original | Toroidal ball-lightning models exist since Johnson (1965) [48], Koloc [49], Seward (1997) [50]; wording revised |
+| "First macroscopic topological soliton in nature" | first | Withdrawn (spheromaks [38]; magnetic clouds interpreted as spheromaks [55]) |
+
+---
+
 ## 1. Verification Summary
 
 All factual claims, physical equations, and theoretical references have been independently verified against peer-reviewed literature and public databases.

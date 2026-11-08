@@ -6,6 +6,32 @@
 
 ---
 
+## v0.8 Status Update (2026-11-07, Claude Opus 5.5 via Claude Code)
+
+The v0.8 re-audit worked through this list and found further problems. Problem 1 turned out to be worse than stated below: the η range 10²–10⁴ m²/s is optimistic. At the measured 4,200 K, air plasma is only ~10⁻⁵ ionized, η_m ≈ 10⁵ m²/s, and τ_η ≈ 10⁻⁷ s for L = 0.1 m — a gap of seven to eight orders of magnitude, not four to five.
+
+| ID | Problem | v0.8 status | Where |
+|----|---------|-------------|-------|
+| 1 | Resistive decay timescale | **Quantified, open (central).** τ_η ≈ 10⁻⁷ s (4,200 K) to 10⁻⁴ s (20,000 K); 5 s needs σ ≈ 4 × 10⁸–1 × 10¹⁰ S/m (7–170 × copper); Rm ≪ 1, so topological protection does not operate | Ch. 8A.1 |
+| 2 | Energy budget | **Quantified, open.** Magnetic 0.3–33 J at 10–100 mT; thermal + chemical ~5–6 kJ; the field cannot be the reservoir | Ch. 8A.2 |
+| 3 | Helicity injection | **Partly quantified, open.** Geomagnetic route gives ~3 × 10⁻⁸ Wb² vs ~6 × 10⁻⁶ Wb² needed (~200 × short); other routes unquantified | Ch. 6A |
+| 4 | Lifetime formula | **Resolved.** v0.7's τ ∝ L/P was dimensionally wrong (units s²), not merely tautological; replaced by τ ≈ E/P_loss | Ch. 8 |
+| 5 | Optical artifact claim | **Partly resolved.** Projection geometry computed: for R ≥ a, ≤ 30% of view directions look round; only a fat torus inside a glow fits "mostly spherical" reports. Comparison with photographs still open | Appendix A |
+| 6 | Spheromak comparison | **Resolved (and it sharpens Problem 1).** Spheromaks are far hotter yet decay in ms | Ch. 8A.4 |
+| 7 | Ionization vs MHD validity | **Resolved.** The collisional fluid description holds at 1 atm, but the ideal (frozen-in) limit fails | Ch. 4, 8A.1 |
+| 8 | Document structure | **Open (deferred).** Chapter numbering kept for v0.8 so the corrections stay reviewable | — |
+| 9 | Numerical simulation | **Open.** | — |
+| 10 | *(new)* Helicity–Hopf charge normalization (Q_H = H_m/(4π)² applied to a physical field) | **Resolved.** Dimensionally inconsistent; H_m (Wb²) = flux-weighted linking | Ch. 2.2 |
+| 11 | *(new)* Self-confinement claims vs magnetic virial theorem | **Resolved.** Atmospheric pressure confines (β ≈ 100 at 50 mT) | Ch. 2.3, 4 |
+| 12 | *(new)* "Soliton" stability borrowed from Faddeev–Niemi (Derrick's theorem; no size scale in MHD) | **Resolved** (terminology note) | Ch. 2.1 |
+| 13 | *(new)* Rotation 500–2,000 m/s inconsistent with 10–100 mT (super-Alfvénic, supersonic, ρv² ≫ B²/2μ₀); v0.7's own L ≈ 10⁻³ implies ~15 m/s | **Resolved.** Replaced by v ≲ v_A ≈ 30–300 m/s | Ch. 8A.3, 10 |
+| 14 | *(new)* Incompressible MHD; viscous term missing ρ | **Resolved** | Ch. 4 |
+| 15 | *(new)* Buoyancy: a 4,200 K pressure-balanced body rises at ~2.5 m/s | **Open** | Ch. 8A.2 |
+| 16 | *(new)* Obstacle penetration (glass) not explained by the model | **Open** (marked in Ch. 9) | Ch. 9 |
+| 17 | *(new)* "Rotation-broadened" spectral signature unmeasurable at 1 atm | **Resolved.** Replaced by Zeeman circular polarization (Stokes V) | Ch. 10 |
+
+---
+
 ## Overall Assessment
 
 The core intuition — ball lightning is a torus, not a sphere — is physically grounded and interesting. The document quality, reference coverage, and intellectual lineage acknowledgments are solid. However, as a hypothesis to be taken seriously by the physics community, there are **several critical quantitative gaps** that must be addressed.
@@ -169,16 +195,16 @@ The hypothesis would be vastly strengthened by even a simple 2D or 3D resistive 
 
 ## Summary Table
 
-| ID | Problem | Priority | Category | Status |
+| ID | Problem | Priority | Category | Status (v0.8) |
 |----|---------|----------|----------|--------|
-| 1 | Resistive decay timescale (τ_η ~ 0.1 ms vs 5–10 s claimed) | **P0** | Quantitative self-consistency | Open |
-| 2 | Energy budget shortfall (14 J magnetic vs 8–80 kJ observed) | **P0** | Quantitative self-consistency | Open |
-| 3 | Helicity injection mechanism unspecified | **P0** | Causal chain | Open |
-| 4 | Lifetime formula is tautological (τ = E/P) | **P1** | Theoretical depth | Open |
-| 5 | Optical artifact claim lacks synthetic imaging | **P1** | Quantitative support | Open |
-| 6 | No spheromak comparison | **P1** | Literature gap | Open |
-| 7 | 4200 K ionization fraction vs MHD validity | **P2** | Self-consistency | Open |
-| 8 | Non-standard document structure | **P2** | Presentation | Open |
+| 1 | Resistive decay timescale (τ_η ~ 0.1 ms vs 5–10 s claimed; v0.8: ~10⁻⁷ s at 4,200 K) | **P0** | Quantitative self-consistency | Quantified, open |
+| 2 | Energy budget shortfall (14 J magnetic vs 8–80 kJ observed) | **P0** | Quantitative self-consistency | Quantified, open |
+| 3 | Helicity injection mechanism unspecified | **P0** | Causal chain | Partly quantified, open |
+| 4 | Lifetime formula is tautological (τ = E/P) | **P1** | Theoretical depth | Resolved |
+| 5 | Optical artifact claim lacks synthetic imaging | **P1** | Quantitative support | Partly resolved |
+| 6 | No spheromak comparison | **P1** | Literature gap | Resolved |
+| 7 | 4200 K ionization fraction vs MHD validity | **P2** | Self-consistency | Resolved |
+| 8 | Non-standard document structure | **P2** | Presentation | Open (deferred) |
 | 9 | No numerical simulation | **P3** | Evidence strength | Open |
 
 ---

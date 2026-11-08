@@ -6,7 +6,9 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17510337.svg)](https://doi.org/10.5281/zenodo.17510337)
 
-A theoretical hypothesis proposing that so-called "Ball Lightning" is not a sphere at all, but a **Hopfion (Ring) Lightning** — a topologically protected plasma ring vortex whose energy and stability derive from topological invariants in the electromagnetic field. The observed spherical appearance is an optical artifact of a thick luminous torus.
+A theoretical hypothesis proposing that so-called "Ball Lightning" is a **Hopfion (Ring) Lightning** — a compact toroidal plasma structure whose magnetic field lines are linked (nonzero magnetic helicity), contained by the surrounding atmosphere's pressure. The observed round appearance is proposed to come from a thick luminous torus seen through its own glow.
+
+> **v0.8 (2026-11-07) is a correction release.** A physics re-audit found that topology alone cannot explain multi-second lifetimes: at the measured ~4,200 K, air plasma's resistive decay time for a 10 cm structure is ~10⁻⁷ s, and a 5 s lifetime would need a conductivity above that of copper. This is now stated as the hypothesis's central open problem, alongside corrected formulas and self-consistent predictions. See [What Changed in v0.8](./markdown/en/hypothesis-en.md#what-changed-in-v08).
 
 > This is a living document. Contributions, critiques, and falsification attempts are welcome.
 
@@ -36,7 +38,9 @@ A theoretical hypothesis proposing that so-called "Ball Lightning" is not a sphe
 
 ## Verification Summary
 
-All factual claims and references have been independently verified using computational tools and public databases.
+> **v0.8 note:** the v0.7 verification below checked references and textbook forms, but it passed several physics errors — a dimensionally wrong lifetime formula, a helicity/Hopf-charge normalization that does not apply to physical fields, a rotation prediction inconsistent with the predicted field, and the claim that topology alone confers stability. These are corrected in v0.8; the re-audit is in §0 of the [Verification Report](./markdown/en/VERIFICATION-REPORT.md), and the numerical checks are reproducible with the scripts in [`analysis/`](./analysis/).
+
+The v0.7 verification (2026-03-12) reported:
 
 | Category | Verified | Method |
 |----------|----------|--------|
@@ -61,11 +65,14 @@ All factual claims and references have been independently verified using computa
 - **Chapter 4 — Governing Equations** — MHD formulation for Hopfion (Ring) Lightning
 - **Chapter 5 — Topological Features** — Self-closed ring loops, Hopf linking, toroidal core
 - **Chapter 6 — Formation Mechanisms** — Lightning-triggered and spontaneous topological generation
-- **Chapter 7 — Environmental Conditions** — Formation factor weights and thresholds
-- **Chapter 8 — Lifetime Extension** — Topologically constrained energy bubble persistence
-- **Chapter 9 — Observational Correspondence** — Matching reported phenomena to ring model
-- **Chapter 10 — Falsifiable Predictions** — Experimental signatures for verification
-- **Chapter 11 — Conclusion** — Scientific positioning as first macroscopic topological soliton
+- **Chapter 6A — Helicity Injection** *(v0.8)* — Where the helicity comes from; geomagnetic route quantified
+- **Chapter 7 — Environmental Conditions** — Formation factor weights and thresholds (qualitative)
+- **Chapter 8 — Lifetime** — Corrected lifetime formula τ ≈ E / P_loss
+- **Chapter 8A — Quantitative Self-Consistency Checks** *(v0.8)* — Resistive decay, energy budget, rotation, spheromak comparison, status
+- **Chapter 9 — Observational Correspondence** — Matching reported phenomena to the ring model, with open items marked
+- **Chapter 10 — Falsifiable Predictions** — Self-consistent experimental signatures
+- **Chapter 11 — Conclusion** — Scientific positioning and the open lifetime problem
+- **Appendix A — Torus Projection Geometry** *(v0.8)* — When does a luminous torus look round?
 
 ---
 
@@ -73,11 +80,13 @@ All factual claims and references have been independently verified using computa
 
 The core topological invariant (Hopf charge):
 
+The core topological quantity (magnetic helicity, a flux-weighted count of how field lines link):
+
 ```
-Q_H = ∫ (A · B) d³r ≠ 0
+H_m = ∫ (A · B) d³r ≠ 0
 ```
 
-When Q_H ≠ 0, magnetic field lines form inseparable knot-and-link configurations, creating a stable electromagnetic "bubble" that can persist in the atmosphere for seconds.
+When H_m ≠ 0 and the field is frozen into the plasma, magnetic field lines form linked configurations that cannot be undone without reconnection. That condition requires a large magnetic Reynolds number; whether atmospheric plasma can meet it for seconds is the open problem examined in Ch. 8A. (v0.7 wrote this as "Q_H", the integer Hopf charge; the two are not interchangeable for a physical magnetic field — see Ch. 2.2.)
 
 ---
 
@@ -89,6 +98,7 @@ This hypothesis was co-created with the assistance of AI models and tools:
 - [Claude Sonnet 4.5](https://anthropic.com/) (Anthropic) — Theoretical Draft
 - [GPT-5](https://openai.com/) (OpenAI) — Theoretical Review & Structural Integration
 - [Claude Opus 4](https://anthropic.com/) (Anthropic) — Document Migration & Formatting
+- [Claude Opus 5.5](https://anthropic.com/) (Anthropic) — v0.8 Physics Re-audit, Corrections & Quantitative Checks
 
 **Tools:**
 - [OpenClaw](https://github.com/openclaw/openclaw) — AI gateway & agent runtime
